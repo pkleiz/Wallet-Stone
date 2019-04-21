@@ -17,7 +17,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/cadastro_login"
+        android:id="@+id/cadastro_id_login"
         android:layout_width="326dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -36,7 +36,7 @@
         android:drawableStart="@drawable/ic_email_gray_24dp" />
 
     <EditText
-        android:id="@+id/cadastro_password"
+        android:id="@+id/cadastro_id_password"
         android:layout_width="326dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -51,11 +51,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cadastro_login"
+        app:layout_constraintTop_toBottomOf="@+id/cadastro_id_login"
         android:drawableStart="@drawable/ic_lock_gray_24dp" />
 
     <EditText
-        android:id="@+id/cadastro_confirmPassword"
+        android:id="@+id/cadastro_id_confirmPassword"
         android:layout_width="326dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -71,10 +71,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cadastro_password" />
+        app:layout_constraintTop_toBottomOf="@+id/cadastro_id_password" />
 
     <Button
-        android:id="@+id/cadastro_submit"
+        android:id="@+id/cadastro_id_submit"
         android:layout_width="254dp"
         android:layout_height="44dp"
         android:layout_marginTop="48dp"
@@ -85,7 +85,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cadastro_confirmPassword" />
+        app:layout_constraintTop_toBottomOf="@+id/cadastro_id_confirmPassword" />
 
 
 </android.support.constraint.ConstraintLayout>

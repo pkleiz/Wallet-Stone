@@ -2,10 +2,10 @@ package com.pedrokleiz.walletstone.Activity;
 
 import android.content.Context;
 import android.content.Intent;
-import android.graphics.Color;
 import android.net.ConnectivityManager;
 import android.support.annotation.NonNull;
 import android.support.design.widget.Snackbar;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -21,6 +21,9 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseAuthException;
+import com.google.firebase.auth.FirebaseAuthUserCollisionException;
+import com.google.firebase.auth.FirebaseAuthWeakPasswordException;
 import com.pedrokleiz.walletstone.Config.FirebaseConfig;
 import com.pedrokleiz.walletstone.Model.User;
 import com.pedrokleiz.walletstone.R;
@@ -45,14 +48,14 @@ public class CadastroActivity extends AppCompatActivity {
         //region Recuperar Ids
 
         cadastro_back = findViewById(R.id.cadastro_back);
-        cadastro_login = findViewById(R.id.cadastro_login);
-        cadastro_password = findViewById(R.id.cadastro_password);
-        cadastro_confirmPassword = findViewById(R.id.cadastro_confirmPassword);
-        cadastro_submit = findViewById(R.id.cadastro_submit);
+        cadastro_login = findViewById(R.id.cadastro_id_login);
+        cadastro_password = findViewById(R.id.cadastro_id_password);
+        cadastro_confirmPassword = findViewById(R.id.cadastro_id_confirmPassword);
+        cadastro_submit = findViewById(R.id.cadastro_id_submit);
 
         //endregion
 
-        //region Clicks
+        //region Navigation
 
         //Volta para tela de Login para tela de login
         cadastro_back.setOnClickListener(new View.OnClickListener() {
@@ -84,20 +87,25 @@ public class CadastroActivity extends AppCompatActivity {
                             notification(v, "A senha precisa ter 6 ou mais caracteres");
                         } else {
                             if (cadastro_password_texto.equals(cadastro_confirmPassword_texto) == false) {
-                                // valid = isValidEmail(cadastro_login_texto);
                                 notification(v, "As senhas não coincidem, tente novamente");
                             } else {
                                 if(verificaConexao() == false)
                                 {
                                     notification(v, "Sem Internet");
                                 } else {
+
+
                                     //Grava os dados no Firebase
                                     user_usuario = new User();
                                     user_usuario.setEmail(cadastro_login_texto);
                                     user_usuario.setPassword(cadastro_password_texto);
                                     registerUser();
 
-                                    notification(v, "Cadastro com sucesso!");
+                                    Toast.makeText(getApplicationContext(),"Cadastro Efetuado com Sucesso",Toast.LENGTH_LONG).show();
+
+                                    Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                                    startActivity(intent);
+
                                 }
                             }
                         }
@@ -112,7 +120,7 @@ public class CadastroActivity extends AppCompatActivity {
     //region Auxiliar Methods
 
     //Esse método Testa se o campo não está vazio e retorna false se sim
-    private boolean stringIsEmply(String s) {
+    public static boolean stringIsEmply(String s) {
         if (s.isEmpty()) {
 
             return false;
@@ -123,7 +131,7 @@ public class CadastroActivity extends AppCompatActivity {
     }
 
     //Esse metodo cria um SnackBar para notificar com uma msg personaliza
-    private void notification(View v, String s) {
+    public static void notification(View v, String s) {
         Snackbar.make(v, s, Snackbar.LENGTH_SHORT).show();
     }
 
@@ -140,8 +148,16 @@ public class CadastroActivity extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(), "Sucesso", Toast.LENGTH_LONG);
                     //notification(getWindow().getDecorView().findViewById(R.id.content),"Sucesso ao cadastrar");
                 } else {
-                    Toast.makeText(getApplicationContext(), "Sucesso", Toast.LENGTH_LONG);
-                    //notification(getWindow().getDecorView().findViewById(R.id.content),"Erro ao cadastrar");
+                    String excesao = "";
+                    try{
+                        throw task.getException();
+                    } catch (FirebaseAuthUserCollisionException e){
+                        excesao = "Este Email já está em uso, tente outro";
+                        e.printStackTrace();
+                    } catch (Exception e) {
+                       excesao = "Erro Interno";
+                    }
+
                 }
             }
         });
