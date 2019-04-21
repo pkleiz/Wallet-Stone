@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "929447579387",
+    "firebase_url": "https://wallet-stone.firebaseio.com",
+    "project_id": "wallet-stone",
+    "storage_bucket": "wallet-stone.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:929447579387:android:5a1b8d9a09686009",
+        "android_client_info": {
+          "package_name": "com.pedrokleiz.walletstone"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "929447579387-d9rljqf0jto42hbhef6bu9ar05c71jsc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.pedrokleiz.walletstone",
+            "certificate_hash": "9fc4e297e1ceb00347058da2fb5e041e20c9b8ed"
+          }
+        },
+        {
+          "client_id": "929447579387-uu672vgbpujh0uehlnniis2h08r9s5ek.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCNzdw3Y55kG6RQi3kmK-KjnaLBtcaPSCM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "929447579387-uu672vgbpujh0uehlnniis2h08r9s5ek.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

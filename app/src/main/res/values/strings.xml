@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Wallet Stone</string>
+    <string name="NameLogin">Login</string>
+    <string name="CreateAccount">Criar Conta</string>
+    <string name="HintLogin">Login</string>
+    <string name="HintPassword">Senha</string>
+    <string name="MessageLogo">Logo da Stone</string>
+    <string name="ChoseUserName">Email</string>
+    <string name="ConfirmPassword">Confirme a senha</string>
+    <string name="back">voltar</string>
+</resources>
