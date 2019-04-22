@@ -9,7 +9,7 @@
     <string name="ConfirmPassword">Confirme a senha</string>
     <string name="back">voltar</string>
     <string name="title_activity_logado">LogadoActivity</string>
-    <string name="title_home">Home</string>
+    <string name="title_home">Início</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
 </resources>

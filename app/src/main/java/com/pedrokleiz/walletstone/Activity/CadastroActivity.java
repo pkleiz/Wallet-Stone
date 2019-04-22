@@ -61,8 +61,7 @@ public class CadastroActivity extends AppCompatActivity {
         cadastro_back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-                startActivity(intent);
+                openScreen();
             }
         });
 
@@ -93,19 +92,11 @@ public class CadastroActivity extends AppCompatActivity {
                                 {
                                     notification(v, "Sem Internet");
                                 } else {
-
-
                                     //Grava os dados no Firebase
                                     user_usuario = new User();
                                     user_usuario.setEmail(cadastro_login_texto);
                                     user_usuario.setPassword(cadastro_password_texto);
                                     registerUser();
-
-                                    Toast.makeText(getApplicationContext(),"Cadastro Efetuado com Sucesso",Toast.LENGTH_LONG).show();
-
-                                    Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-                                    startActivity(intent);
-
                                 }
                             }
                         }
@@ -126,7 +117,9 @@ public class CadastroActivity extends AppCompatActivity {
             return false;
 
         } else {
+
             return true;
+
         }
     }
 
@@ -145,10 +138,11 @@ public class CadastroActivity extends AppCompatActivity {
 
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful()) {
-                    Toast.makeText(getApplicationContext(), "Sucesso", Toast.LENGTH_LONG);
+                    Toast.makeText(CadastroActivity.this, "Conta criada com sucesso", Toast.LENGTH_SHORT).show();
+                    openScreen();
                     //notification(getWindow().getDecorView().findViewById(R.id.content),"Sucesso ao cadastrar");
                 } else {
-                    String excesao = "";
+                    String excesao;
                     try{
                         throw task.getException();
                     } catch (FirebaseAuthUserCollisionException e){
@@ -157,7 +151,7 @@ public class CadastroActivity extends AppCompatActivity {
                     } catch (Exception e) {
                        excesao = "Erro Interno";
                     }
-
+                    Toast.makeText(CadastroActivity.this,excesao,Toast.LENGTH_LONG).show();
                 }
             }
         });
@@ -179,7 +173,20 @@ public class CadastroActivity extends AppCompatActivity {
         }
         return conectado;
     }
-
+    //Muda de tela
+    private void openScreen(){
+        startActivity(new Intent(this,MainActivity.class));
+        finish();
+    }
+    //Sleep de 1 segundo
+    private void sleep(){
+        try {
+            // thread to sleep for 1000 milliseconds
+            Thread.sleep(1000);
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+    }
     //endregion
 }
 

@@ -13,6 +13,9 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException;
+import com.google.firebase.auth.FirebaseAuthInvalidUserException;
+import com.google.firebase.auth.FirebaseAuthUserCollisionException;
 import com.pedrokleiz.walletstone.Config.FirebaseConfig;
 import com.pedrokleiz.walletstone.Model.User;
 import com.pedrokleiz.walletstone.R;
@@ -24,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
     private EditText login_login, login_password;
     private Button login_submit,login_createAccount;
     private User usuario;
-    private FirebaseAuth login_autentication;
+    private FirebaseAuth login_autentication,login_verifyIsLogged;
 
     //endregion
 
@@ -32,6 +35,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        verifyUserLogged();
 
         //region Recuperar Ids
 
@@ -61,6 +66,7 @@ public class MainActivity extends AppCompatActivity {
                         usuario = new User();
                         usuario.setEmail(login_login_texto);
                         usuario.setPassword(login_password_texto);
+                        validateLogin();
 
                     }
                 }
@@ -81,6 +87,13 @@ public class MainActivity extends AppCompatActivity {
 
     //region Auxiliar Methods
 
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        verifyUserLogged();
+    }
+
     static void changeValueOfFieldText(EditText t, String s){
         t.setText(s);
     }
@@ -94,13 +107,38 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful()){
-                    Toast.makeText(MainActivity.this,"Sucesso no Login",Toast.LENGTH_SHORT).show();
+                    openScreen();
+                    finish();
                 }else {
-                    Toast.makeText(MainActivity.this,"Erro no Login",Toast.LENGTH_SHORT).show();
+                    String excesao;
+                    try{
+                        throw task.getException();
+                    } catch (FirebaseAuthInvalidUserException e){
+                        excesao = "Usuário não cadastrado";
+                    } catch (FirebaseAuthInvalidCredentialsException e) {
+                        excesao = "Email ou senha errados, tente novamente";
+                    } catch (Exception e) {
+                        excesao = "Erro no login";
+                        e.printStackTrace();
+                    }
+                    Toast.makeText(MainActivity.this,excesao,Toast.LENGTH_LONG).show();
                 }
             }
         });
     }
+
+    //Vai pra tela de logado
+    private void openScreen(){
+        startActivity(new Intent(this,LogadoActivity.class));
+        finish();
+    }
+
+    public void verifyUserLogged(){
+        login_verifyIsLogged = FirebaseConfig.getFirebaseAutentication();
+        if(login_verifyIsLogged.getCurrentUser() != null){
+            openScreen();
+        }
+    };
 
     //endregion
 }
