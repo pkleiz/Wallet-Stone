@@ -3,44 +3,86 @@ package com.pedrokleiz.walletstone.Activity;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
 
+import com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx;
+import com.pedrokleiz.walletstone.Fragments.ComprarFragment;
+import com.pedrokleiz.walletstone.Fragments.HistoricoFragment;
+import com.pedrokleiz.walletstone.Fragments.InicioFragment;
+import com.pedrokleiz.walletstone.Fragments.TrocarFragment;
+import com.pedrokleiz.walletstone.Fragments.VenderFragment;
 import com.pedrokleiz.walletstone.R;
 
 public class LogadoActivity extends AppCompatActivity {
 
     private TextView mTextMessage;
 
-    private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
-            = new BottomNavigationView.OnNavigationItemSelectedListener() {
+    private void habilitarNavegacao(BottomNavigationViewEx viewEx) {
 
-        @Override
-        public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-            switch (item.getItemId()) {
-                case R.id.navigation_home:
-                    mTextMessage.setText(R.string.title_home);
-                    return true;
-                case R.id.navigation_buy_id:
-                    mTextMessage.setText(R.string.title_dashboard);
-                    return true;
-                case R.id.navigation_sell_id:
-                    mTextMessage.setText(R.string.title_notifications);
-                    return true;
+        viewEx.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+
+                FragmentManager fragmentManager = getSupportFragmentManager();
+                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+
+                switch (item.getItemId()) {
+                    case R.id.navigation_home:
+                        fragmentTransaction.replace(R.id.viewPager, new InicioFragment()).commit();
+                        return true;
+                    case R.id.navigation_buy_id:
+                        fragmentTransaction.replace(R.id.viewPager, new ComprarFragment()).commit();
+                        return true;
+                    case R.id.navigation_sell_id:
+                        fragmentTransaction.replace(R.id.viewPager, new VenderFragment()).commit();
+                        return true;
+                    case R.id.navigation_change_id:
+                        fragmentTransaction.replace(R.id.viewPager, new TrocarFragment()).commit();
+                        return true;
+                    case R.id.navigation_history_id:
+                        fragmentTransaction.replace(R.id.viewPager, new HistoricoFragment()).commit();
+                        return true;
+                }
+                return false;
             }
-            return false;
-        }
-    };
+        });
+
+
+    }
+
+    ;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_logado);
 
-        mTextMessage = (TextView) findViewById(R.id.message);
-        BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
-        navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+        configuraBottomNavigationView();
+
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+
+        fragmentTransaction.replace(R.id.viewPager, new InicioFragment()).commit();
+
     }
 
+    //Metodo que cria o o BottomNavigation
+    private void configuraBottomNavigationView() {
+        BottomNavigationViewEx bottomNavigationViewEx = findViewById(R.id.bottomNavigation);
+
+        bottomNavigationViewEx.enableAnimation(true);
+        bottomNavigationViewEx.enableShiftingMode(false);
+        habilitarNavegacao(bottomNavigationViewEx);
+
+        //Configura item selecionado inicialmente no bottom navigation
+        Menu menu = bottomNavigationViewEx.getMenu();
+        MenuItem menuItem = menu.getItem(0  );
+        menuItem.setChecked(true);
+    }
 }
