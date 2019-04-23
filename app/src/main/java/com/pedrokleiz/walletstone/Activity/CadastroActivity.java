@@ -14,6 +14,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 import android.widget.VideoView;
 
@@ -36,7 +37,6 @@ public class CadastroActivity extends AppCompatActivity {
     private Button cadastro_submit;
     private FirebaseAuth cadastro_autentication;
     private User user_usuario;
-
     //endregion
 
 

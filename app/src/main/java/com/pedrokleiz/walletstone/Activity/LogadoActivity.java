@@ -7,10 +7,13 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.TextView;
 
+import com.google.firebase.auth.FirebaseAuth;
 import com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx;
+import com.pedrokleiz.walletstone.Config.FirebaseConfig;
 import com.pedrokleiz.walletstone.Fragments.ComprarFragment;
 import com.pedrokleiz.walletstone.Fragments.HistoricoFragment;
 import com.pedrokleiz.walletstone.Fragments.InicioFragment;
@@ -51,17 +54,16 @@ public class LogadoActivity extends AppCompatActivity {
                 return false;
             }
         });
-
-
     }
 
-    ;
 
-
+    FirebaseAuth autenticacao;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_logado);
+
+        autenticacao = FirebaseConfig.getFirebaseAutentication();
 
         configuraBottomNavigationView();
 
@@ -76,7 +78,7 @@ public class LogadoActivity extends AppCompatActivity {
     private void configuraBottomNavigationView() {
         BottomNavigationViewEx bottomNavigationViewEx = findViewById(R.id.bottomNavigation);
 
-        bottomNavigationViewEx.enableAnimation(true);
+        bottomNavigationViewEx.enableAnimation(false);
         bottomNavigationViewEx.enableShiftingMode(false);
         habilitarNavegacao(bottomNavigationViewEx);
 
@@ -85,4 +87,14 @@ public class LogadoActivity extends AppCompatActivity {
         MenuItem menuItem = menu.getItem(0  );
         menuItem.setChecked(true);
     }
+
+    private void deslogarUsuario(){
+        try{
+            autenticacao.signOut();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+    }
+
+
 }
