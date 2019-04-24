@@ -28,9 +28,13 @@
                         </option>
                         <option name="values">
                           <map>
+                            <entry key="assetSourceType" value="FILE" />
                             <entry key="color" value="c6c6c6" />
-                            <entry key="outputName" value="ic_history_black_24dp" />
-                            <entry key="sourceFile" value="C:\Users\pklei\OneDrive\Área de Trabalho\553d0fbd9e.svg" />
+                            <entry key="height" value="280" />
+                            <entry key="outputName" value="ic_retangulo_vender" />
+                            <entry key="overrideSize" value="true" />
+                            <entry key="sourceFile" value="C:\Users\pklei\Documents\retangulo.psd" />
+                            <entry key="width" value="542" />
                           </map>
                         </option>
                       </PersistentState>

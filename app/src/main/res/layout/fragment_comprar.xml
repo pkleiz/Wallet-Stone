@@ -1,13 +1,441 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Fragments.ComprarFragment">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+    <ImageView
+        android:id="@+id/compras_retangulo"
+        android:layout_width="360dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="152dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.228"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_retangulo_fundo"
+        tools:ignore="VectorDrawableCompat" />
 
-</FrameLayout>
+    <ImageView
+        android:id="@+id/compras_retangulo3"
+        android:layout_width="360dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.228"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/compras_retangulo"
+        app:srcCompat="@drawable/ic_retangulo_fundo"
+        tools:ignore="VectorDrawableCompat" />
+
+    <TextView
+        android:id="@+id/compras_valorDisponivel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginRight="28dp"
+        android:text="100.000,00"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/compras_stoneLogo"
+        android:layout_width="138dp"
+        android:layout_height="97dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintEnd_toStartOf="@+id/compras_reais"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/stone_pagamentos" />
+
+    <TextView
+        android:id="@+id/compras_reaisTopo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        android:text="@string/money"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/compras_valorDisponivel"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/compas_textoValordisp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:gravity="center"
+        android:text="valor disponível para \n aplicação"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.929"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/compras_valorDisponivel" />
+
+    <ImageView
+        android:id="@+id/compras_logoBitcoin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/compras_retangulo"
+        app:layout_constraintStart_toStartOf="@+id/compras_retangulo"
+        app:layout_constraintTop_toTopOf="@+id/compras_retangulo"
+        app:layout_constraintVertical_bias="0.208"
+        app:srcCompat="@drawable/ic_bitcoin"
+        tools:ignore="VectorDrawableCompat" />
+
+    <TextView
+        android:id="@+id/compras_valorBitcoin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:text="20.691,00"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/compras_retangulo"
+        app:layout_constraintStart_toEndOf="@+id/compras_reais"
+        app:layout_constraintTop_toTopOf="@+id/compras_retangulo"
+        app:layout_constraintVertical_bias="0.228" />
+
+    <TextView
+        android:id="@+id/compras_reais"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:text="@string/money"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/compras_retangulo"
+        app:layout_constraintStart_toEndOf="@+id/compras_logoBitcoin"
+        app:layout_constraintTop_toTopOf="@+id/compras_retangulo"
+        app:layout_constraintVertical_bias="0.228" />
+
+    <TextView
+        android:id="@+id/compras_unitario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/unitario"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/compras_retangulo"
+        app:layout_constraintEnd_toEndOf="@+id/compras_retangulo"
+        app:layout_constraintHorizontal_bias="0.728"
+        app:layout_constraintStart_toEndOf="@+id/compras_valorBitcoin"
+        app:layout_constraintTop_toTopOf="@+id/compras_retangulo"
+        app:layout_constraintVertical_bias="0.26" />
+
+    <ImageView
+        android:id="@+id/compras_linha2"
+        android:layout_width="340dp"
+        android:layout_height="5dp"
+        android:contentDescription="TODO"
+        android:tint="#00858383"
+        app:layout_constraintBottom_toBottomOf="@+id/compras_retangulo3"
+        app:layout_constraintEnd_toEndOf="@+id/compras_retangulo3"
+        app:layout_constraintStart_toStartOf="@+id/compras_retangulo3"
+        app:layout_constraintTop_toTopOf="@+id/compras_retangulo3"
+        app:layout_constraintVertical_bias="0.406"
+        app:srcCompat="@drawable/ic_linha_reta"
+        tools:ignore="VectorDrawableCompat" />
+
+    <ImageView
+        android:id="@+id/compras_linha3"
+        android:layout_width="340dp"
+        android:layout_height="5dp"
+        android:contentDescription="TODO"
+        android:tint="#00858383"
+        app:layout_constraintBottom_toBottomOf="@+id/compras_retangulo"
+        app:layout_constraintEnd_toEndOf="@+id/compras_retangulo"
+        app:layout_constraintStart_toStartOf="@+id/compras_retangulo"
+        app:layout_constraintTop_toTopOf="@+id/compras_retangulo"
+        app:layout_constraintVertical_bias="0.406"
+        app:srcCompat="@drawable/ic_linha_reta"
+        tools:ignore="VectorDrawableCompat" />
+
+    <TextView
+        android:id="@+id/compras_quantidade"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/quantidade"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/compras_retangulo"
+        app:layout_constraintEnd_toStartOf="@+id/guideline3"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/compras_retangulo"
+        app:layout_constraintTop_toTopOf="@+id/compras_retangulo"
+        app:layout_constraintVertical_bias="0.739" />
+
+    <EditText
+        android:id="@+id/compras_numeroCompraBitcoin"
+        android:layout_width="124dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="@android:color/black"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:textColorLink="#000"
+        android:textCursorDrawable="@android:color/background_dark"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/compras_retangulo"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintStart_toStartOf="@+id/guideline3"
+        app:layout_constraintTop_toTopOf="@+id/compras_retangulo"
+        app:layout_constraintVertical_bias="0.692" />
+
+    <TextView
+        android:id="@+id/compas_palavraBitcoin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bitcoin"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/compras_retangulo"
+        app:layout_constraintEnd_toEndOf="@+id/compras_retangulo"
+        app:layout_constraintHorizontal_bias="0.256"
+        app:layout_constraintStart_toEndOf="@+id/compras_numeroCompraBitcoin"
+        app:layout_constraintTop_toTopOf="@+id/compras_retangulo"
+        app:layout_constraintVertical_bias="0.731" />
+
+    <TextView
+        android:id="@+id/compras_logoBrita"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:shadowColor="#00070707"
+        android:text="@string/brita"
+        android:textColor="#161616"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/compras_retangulo3"
+        app:layout_constraintStart_toStartOf="@+id/compras_retangulo3"
+        app:layout_constraintTop_toTopOf="@+id/compras_retangulo3"
+        app:layout_constraintVertical_bias="0.187" />
+
+    <TextView
+        android:id="@+id/compras_reaisBrita"
+        android:layout_width="36dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:text="@string/money"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/compras_retangulo3"
+        app:layout_constraintStart_toEndOf="@+id/compras_logoBrita"
+        app:layout_constraintTop_toTopOf="@+id/compras_retangulo3"
+        app:layout_constraintVertical_bias="0.228" />
+
+    <TextView
+        android:id="@+id/compras_valorBrita"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="3,93"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/compras_retangulo3"
+        app:layout_constraintStart_toEndOf="@+id/compras_reaisBrita"
+        app:layout_constraintTop_toTopOf="@+id/compras_retangulo3"
+        app:layout_constraintVertical_bias="0.203" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="114dp" />
+
+    <TextView
+        android:id="@+id/compras_unitarioBrita"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/unitario"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/compras_retangulo3"
+        app:layout_constraintEnd_toEndOf="@+id/compras_retangulo3"
+        app:layout_constraintHorizontal_bias="0.813"
+        app:layout_constraintStart_toEndOf="@+id/compras_valorBrita"
+        app:layout_constraintTop_toTopOf="@+id/compras_retangulo3"
+        app:layout_constraintVertical_bias="0.235" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="117dp" />
+
+    <TextView
+        android:id="@+id/compras_quantidadeBrita"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:text="@string/quantidade"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/compras_retangulo3"
+        app:layout_constraintEnd_toStartOf="@+id/guideline3"
+        app:layout_constraintStart_toStartOf="@+id/compras_retangulo3"
+        app:layout_constraintTop_toTopOf="@+id/compras_retangulo3"
+        app:layout_constraintVertical_bias="0.715" />
+
+    <EditText
+        android:id="@+id/compras_numeroCompraBrita"
+        android:layout_width="124dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="@android:color/black"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:textColorLink="#000"
+        android:textCursorDrawable="@android:color/background_dark"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/compras_retangulo3"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintStart_toStartOf="@+id/guideline3"
+        app:layout_constraintTop_toTopOf="@+id/compras_retangulo3"
+        app:layout_constraintVertical_bias="0.663" />
+
+    <TextView
+        android:id="@+id/compras_palavraBrita"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Brita"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/compras_retangulo3"
+        app:layout_constraintEnd_toEndOf="@+id/compras_retangulo3"
+        app:layout_constraintHorizontal_bias="0.137"
+        app:layout_constraintStart_toEndOf="@+id/compras_numeroCompraBrita"
+        app:layout_constraintTop_toTopOf="@+id/compras_retangulo3"
+        app:layout_constraintVertical_bias="0.715" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="154dp" />
+
+    <TextView
+        android:id="@+id/compras_total"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="80dp"
+        android:text="@string/total"
+        android:textColor="#111010"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline3"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/compras_confirmar"
+        android:layout_width="120dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="#24B34D"
+        android:text="@string/confirmar"
+        android:textColor="#FEFFFC"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/compras_valorTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="76dp"
+        android:gravity="center"
+        android:text="10"
+        android:textColor="#090808"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/compras_linhaValorDisponivel"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:contentDescription="TODO"
+        android:tint="#F5181616"
+        app:layout_constraintBottom_toTopOf="@+id/compas_textoValordisp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline3"
+        app:layout_constraintTop_toBottomOf="@+id/compras_valorDisponivel"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/ic_linha_reta"
+        tools:ignore="VectorDrawableCompat" />
+
+    <ImageView
+        android:id="@+id/compras_linhaTotal2"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="24dp"
+        android:contentDescription="TODO"
+        android:tint="#F5181616"
+        app:layout_constraintBottom_toTopOf="@+id/compras_confirmar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/ic_linha_reta"
+        tools:ignore="VectorDrawableCompat" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20dp" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="385dp" />
+
+
+</android.support.constraint.ConstraintLayout>

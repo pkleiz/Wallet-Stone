@@ -6,11 +6,32 @@
     android:layout_height="match_parent"
     tools:context=".Fragments.InicioFragment">
 
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.09" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="395dp" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="16dp" />
+
     <Button
         android:id="@+id/inicio_logout"
         android:layout_width="55dp"
         android:layout_height="28dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
         android:background="@color/colorPrimary"
@@ -19,4 +40,343 @@
         android:textSize="8sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/inicio_bitcoinLogoCirculo"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:contentDescription="TODO"
+        app:layout_constraintEnd_toStartOf="@+id/guideline5"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="@+id/guideline3"
+        app:srcCompat="@drawable/ic_bitcoin" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="360dp" />
+
+    <ImageView
+        android:id="@+id/inicio_linhaTopoEsquerda"
+        android:layout_width="143dp"
+        android:layout_height="6dp"
+        android:layout_marginTop="28dp"
+        android:contentDescription="TODO"
+        app:layout_constraintStart_toStartOf="@+id/guideline5"
+        app:layout_constraintTop_toTopOf="@+id/guideline3"
+        app:srcCompat="@drawable/ic_linha_reta" />
+
+    <ImageView
+        android:id="@+id/inicio_linhaTopoDireita"
+        android:layout_width="143dp"
+        android:layout_height="6dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:contentDescription="TODO"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline8"
+        app:layout_constraintTop_toTopOf="@+id/guideline3"
+        app:srcCompat="@drawable/ic_linha_reta" />
+
+    <TextView
+        android:id="@+id/inicio_rsTopoEsquerda"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/money"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/guideline6"
+        app:layout_constraintHorizontal_bias="0.666"
+        app:layout_constraintStart_toStartOf="@+id/guideline5"
+        app:layout_constraintTop_toTopOf="@+id/guideline3" />
+
+    <TextView
+        android:id="@+id/inicio_rsTopoDireita"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/money"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/guideline9"
+        app:layout_constraintStart_toStartOf="@+id/guideline8"
+        app:layout_constraintTop_toTopOf="@+id/guideline3" />
+
+    <TextView
+        android:id="@+id/inicio_valorAtualBitcoin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:text="1024,00"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/guideline7"
+        app:layout_constraintTop_toTopOf="@+id/guideline3" />
+
+    <TextView
+        android:id="@+id/inicio_valorAtualBrita"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="1024,00"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/guideline9"
+        app:layout_constraintTop_toTopOf="@+id/guideline3" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="79dp" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="73dp" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="253dp" />
+
+    <TextView
+        android:id="@+id/inicio_britaLogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/brita"
+        android:textColor="@android:color/black"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/guideline8"
+        app:layout_constraintTop_toTopOf="@+id/guideline3" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="283dp" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="147dp" />
+
+    <ImageView
+        android:id="@+id/inicio_circuloCentral"
+        android:layout_width="378dp"
+        android:layout_height="332dp"
+        android:layout_marginTop="40dp"
+        android:contentDescription="TODO"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="@+id/guideline4"
+        app:srcCompat="@drawable/ic_circulo" />
+
+    <ImageView
+        android:id="@+id/inicio_linhaCirculoSuperior"
+        android:layout_width="233dp"
+        android:layout_height="14dp"
+        android:layout_marginTop="104dp"
+        android:tint="@android:color/darker_gray"
+        app:layout_constraintEnd_toEndOf="@+id/inicio_circuloCentral"
+        app:layout_constraintStart_toStartOf="@+id/inicio_circuloCentral"
+        app:layout_constraintTop_toTopOf="@+id/inicio_circuloCentral"
+        app:srcCompat="@drawable/ic_linha_reta" />
+
+    <ImageView
+        android:id="@+id/inicio_linhaCirculoInferior"
+        android:layout_width="142dp"
+        android:layout_height="9dp"
+        android:layout_marginBottom="24dp"
+        android:tint="@android:color/darker_gray"
+        app:layout_constraintBottom_toBottomOf="@+id/inicio_circuloCentral"
+        app:layout_constraintEnd_toEndOf="@+id/inicio_circuloCentral"
+        app:layout_constraintStart_toStartOf="@+id/inicio_circuloCentral"
+        app:srcCompat="@drawable/ic_linha_reta" />
+
+    <TextView
+        android:id="@+id/inicio_valorDisponivel"
+        android:layout_width="wrap_content"
+        android:layout_height="52dp"
+        android:layout_marginTop="64dp"
+        android:text="100.000,00"
+        android:textSize="40dp"
+        app:layout_constraintEnd_toEndOf="@+id/inicio_circuloCentral"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="@+id/inicio_circuloCentral"
+        app:layout_constraintTop_toTopOf="@+id/inicio_circuloCentral" />
+
+    <TextView
+        android:id="@+id/inicio_rsCiruloSuperior"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:text="@string/money"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/inicio_circuloCentral"
+        app:layout_constraintHorizontal_bias="0.192"
+        app:layout_constraintStart_toStartOf="@+id/inicio_circuloCentral"
+        app:layout_constraintTop_toTopOf="@+id/inicio_circuloCentral" />
+
+    <TextView
+        android:id="@+id/inicio_rsCiruloEsquerda"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="118dp"
+        android:text="@string/money"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/inicio_circuloCentral"
+        app:layout_constraintEnd_toEndOf="@+id/inicio_circuloCentral"
+        app:layout_constraintHorizontal_bias="0.14"
+        app:layout_constraintStart_toStartOf="@+id/inicio_circuloCentral" />
+
+    <TextView
+        android:id="@+id/inicio_rsCiruloDireita"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="118dp"
+        android:text="@string/money"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/inicio_circuloCentral"
+        app:layout_constraintEnd_toEndOf="@+id/inicio_circuloCentral"
+        app:layout_constraintHorizontal_bias="0.519"
+        app:layout_constraintStart_toStartOf="@+id/inicio_circuloCentral" />
+
+    <ImageView
+        android:id="@+id/inicio_bitcoinCirculo"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="144dp"
+        app:layout_constraintStart_toStartOf="@+id/inicio_linhaCirculoSuperior"
+        app:layout_constraintTop_toTopOf="@+id/inicio_circuloCentral"
+        app:srcCompat="@drawable/ic_bitcoin"
+        android:contentDescription="TODO" />
+
+    <TextView
+        android:id="@+id/inicio_britaCiculo"
+        android:layout_width="wrap_content"
+        android:layout_height="26dp"
+        android:layout_marginTop="148dp"
+        android:layout_marginEnd="68dp"
+        android:layout_marginRight="68dp"
+        android:text="@string/brita"
+        android:textColor="@android:color/black"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/inicio_linhaCirculoSuperior"
+        app:layout_constraintTop_toTopOf="@+id/inicio_circuloCentral" />
+
+    <TextView
+        android:id="@+id/inicio_totalTexto"
+        android:layout_width="wrap_content"
+        android:layout_height="26dp"
+        android:layout_marginBottom="64dp"
+        android:text="@string/total"
+        android:textColor="@android:color/black"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/inicio_circuloCentral"
+        app:layout_constraintEnd_toEndOf="@+id/inicio_circuloCentral"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="@+id/inicio_circuloCentral" />
+
+    <TextView
+        android:id="@+id/inicio_bitcoinComprado"
+        android:layout_width="wrap_content"
+        android:layout_height="21dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="40dp"
+        android:text="3"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/inicio_bitcoinCirculo"
+        app:layout_constraintTop_toBottomOf="@+id/inicio_valorDisponivel" />
+
+    <TextView
+        android:id="@+id/inicio_britaComprado"
+        android:layout_width="wrap_content"
+        android:layout_height="21dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="40dp"
+        android:text="210"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/inicio_britaCiculo"
+        app:layout_constraintTop_toBottomOf="@+id/inicio_valorDisponivel" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_end="332dp" />
+
+    <TextView
+        android:id="@+id/inicio_totalComCompras"
+        android:layout_width="wrap_content"
+        android:layout_height="22dp"
+        android:layout_marginBottom="32dp"
+        android:text="189.004,00"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/inicio_circuloCentral"
+        app:layout_constraintEnd_toEndOf="@+id/inicio_circuloCentral"
+        app:layout_constraintHorizontal_bias="0.547"
+        app:layout_constraintStart_toStartOf="@+id/inicio_circuloCentral" />
+
+    <TextView
+        android:id="@+id/inicio_bitcoinRS"
+        android:layout_width="wrap_content"
+        android:layout_height="22dp"
+        android:layout_marginStart="72dp"
+        android:layout_marginLeft="72dp"
+        android:layout_marginBottom="120dp"
+        android:text="60.004,00"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/inicio_circuloCentral"
+        app:layout_constraintStart_toStartOf="@+id/guideline" />
+
+    <TextView
+        android:id="@+id/inicio_britaRS"
+        android:layout_width="wrap_content"
+        android:layout_height="22dp"
+        android:layout_marginBottom="120dp"
+        android:text="128.004,00"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/inicio_circuloCentral"
+        app:layout_constraintEnd_toEndOf="@+id/inicio_circuloCentral"
+        app:layout_constraintHorizontal_bias="0.408"
+        app:layout_constraintStart_toEndOf="@+id/inicio_bitcoinRS" />
+
+    <TextView
+        android:id="@+id/inicio_rsCiruloInferior"
+        android:layout_width="23dp"
+        android:layout_height="21dp"
+        android:text="@string/money"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/inicio_totalComCompras"
+        app:layout_constraintEnd_toEndOf="@+id/inicio_circuloCentral"
+        app:layout_constraintHorizontal_bias="0.355"
+        app:layout_constraintStart_toStartOf="@+id/inicio_circuloCentral" />
+
 </android.support.constraint.ConstraintLayout>

@@ -15,4 +15,11 @@
     <string name="title_change">Trocar</string>
     <string name="title_history">Histórico</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="money">R$</string>
+    <string name="total">Total:</string>
+    <string name="comp">Comprado por R$</string>
+    <string name="quantidade">Quantidade:</string>
+    <string name="brita">BRT</string>
+    <string name="unitario">unitário</string>
+    <string name="confirmar">Confirmar</string>
 </resources>
