@@ -78,8 +78,8 @@ public class LogadoActivity extends AppCompatActivity {
     private void configuraBottomNavigationView() {
         BottomNavigationViewEx bottomNavigationViewEx = findViewById(R.id.bottomNavigation);
 
-        bottomNavigationViewEx.enableAnimation(false);
-        bottomNavigationViewEx.enableShiftingMode(false);
+        bottomNavigationViewEx.enableAnimation(true);
+        bottomNavigationViewEx.enableShiftingMode(true);
         habilitarNavegacao(bottomNavigationViewEx);
 
         //Configura item selecionado inicialmente no bottom navigation
@@ -87,14 +87,5 @@ public class LogadoActivity extends AppCompatActivity {
         MenuItem menuItem = menu.getItem(0  );
         menuItem.setChecked(true);
     }
-
-    private void deslogarUsuario(){
-        try{
-            autenticacao.signOut();
-        }catch (Exception e){
-            e.printStackTrace();
-        }
-    }
-
 
 }

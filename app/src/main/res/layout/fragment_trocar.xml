@@ -10,333 +10,145 @@ tools:context=".Fragments.TrocarFragment">
         android:id="@+id/trocar_confirmar"
         android:layout_width="120dp"
         android:layout_height="47dp"
+        android:layout_marginBottom="8dp"
         android:background="#24B34D"
         android:text="@string/confirmar"
         android:textColor="#FEFFFC"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/trocar_retanguloBrita"
-        app:layout_constraintVertical_bias="0.177" />
-
-<ImageView
-    android:id="@+id/trocar_linhaValorDisponivel"
-    android:layout_width="140dp"
-    android:layout_height="wrap_content"
-    android:contentDescription="TODO"
-    android:tint="#F5181616"
-    app:layout_constraintBottom_toBottomOf="@+id/trocar_valorDisponivel"
-    app:layout_constraintEnd_toStartOf="@+id/guideline7"
-    app:layout_constraintHorizontal_bias="0.934"
-    app:layout_constraintStart_toEndOf="@+id/vendas_logoStone"
-    app:layout_constraintTop_toTopOf="@+id/vendas_textoValordisp"
-    app:layout_constraintVertical_bias="0.0"
-    app:srcCompat="@drawable/ic_linha_reta"
-    tools:ignore="VectorDrawableCompat" />
-
-<TextView
-    android:id="@+id/trocar_reaisTopo"
-    android:layout_width="28dp"
-    android:layout_height="26dp"
-    android:layout_marginTop="44dp"
-    android:text="@string/money"
-    android:textSize="20sp"
-    android:textStyle="bold"
-    app:layout_constraintEnd_toStartOf="@+id/trocar_valorDisponivel"
-    app:layout_constraintHorizontal_bias="1.0"
-    app:layout_constraintStart_toStartOf="@+id/guideline4"
-    app:layout_constraintTop_toTopOf="parent" />
-
-<TextView
-    android:id="@+id/trocar_valorDisponivel"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_marginEnd="20dp"
-    android:layout_marginRight="20dp"
-    android:text="100.000,00"
-    android:textSize="20sp"
-    android:textStyle="bold"
-    app:layout_constraintBottom_toTopOf="@+id/trocar_textoValordisp"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintTop_toTopOf="parent"
-    app:layout_constraintVertical_bias="1.0" />
-
-<TextView
-    android:id="@+id/trocar_textoValordisp"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_marginTop="72dp"
-    android:layout_marginEnd="16dp"
-    android:layout_marginRight="16dp"
-    android:gravity="center"
-    android:text="valor disponível para \n aplicação"
-    android:textSize="12sp"
-    app:layout_constraintEnd_toStartOf="@+id/guideline7"
-    app:layout_constraintTop_toTopOf="parent" />
-
-<android.support.constraint.Guideline
-    android:id="@+id/guideline4"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:orientation="vertical"
-    app:layout_constraintGuide_end="171dp" />
-
-<android.support.constraint.Guideline
-    android:id="@+id/guideline7"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:orientation="vertical"
-    app:layout_constraintGuide_percent="0.95" />
-
-<android.support.constraint.Guideline
-    android:id="@+id/guideline8"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:orientation="horizontal"
-    app:layout_constraintGuide_end="620dp" />
-
-<ImageView
-    android:id="@+id/trocar_logoStone"
-    android:layout_width="138dp"
-    android:layout_height="97dp"
-    android:layout_marginTop="16dp"
-    android:layout_marginEnd="252dp"
-    android:layout_marginRight="252dp"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintTop_toTopOf="parent"
-    app:srcCompat="@drawable/stone_pagamentos" />
-
-<android.support.constraint.Guideline
-    android:id="@+id/guideline9"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:orientation="horizontal"
-    app:layout_constraintGuide_begin="20dp" />
-
-<android.support.constraint.Guideline
-    android:id="@+id/guideline10"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:orientation="vertical"
-    app:layout_constraintGuide_begin="21dp" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
-        android:id="@+id/trocar_retanguloBrita"
-        android:layout_width="369dp"
-        android:layout_height="211dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/guideline7"
-        app:layout_constraintHorizontal_bias="0.533"
-        app:layout_constraintStart_toStartOf="@+id/guideline10"
-        app:layout_constraintTop_toBottomOf="@+id/trocar_retanguloBitcoin"
-        app:layout_constraintVertical_bias="0.101"
-        app:srcCompat="@drawable/ic_retangulo_vender" />
+        android:id="@+id/trocar_linhaValorDisponivel"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:contentDescription="TODO"
+        android:tint="#F5181616"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/trocar_valorDisponivel"
+        app:srcCompat="@drawable/ic_linha_reta"
+        tools:ignore="VectorDrawableCompat" />
+
+    <TextView
+        android:id="@+id/trocar_reaisTopo"
+        android:layout_width="0dp"
+        android:layout_height="28dp"
+        android:layout_marginTop="44dp"
+        android:text="@string/money"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/trocar_valorDisponivel"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/trocar_valorDisponivel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginRight="40dp"
+        android:text="100.000,00"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/trocar_textoValordisp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="44dp"
+        android:layout_marginRight="44dp"
+        android:gravity="center"
+        android:text="valor disponível para \n aplicação"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/trocar_valorDisponivel" />
+
+    <ImageView
+        android:id="@+id/trocar_logoStone"
+        android:layout_width="138dp"
+        android:layout_height="97dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/stone_pagamentos" />
 
     <ImageView
         android:id="@+id/trocar_retanguloBitcoin"
-        android:layout_width="369dp"
-        android:layout_height="211dp"
-        android:layout_marginTop="104dp"
-        app:layout_constraintEnd_toStartOf="@+id/guideline7"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/guideline10"
-        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="360dp"
+        android:layout_height="186dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/trocar_logoStone"
         app:srcCompat="@drawable/ic_retangulo_vender" />
 
-<ImageView
-    android:id="@+id/trocar_linha"
-    android:layout_width="340dp"
-    android:layout_height="5dp"
-    android:layout_marginBottom="8dp"
-    android:contentDescription="TODO"
-    android:tint="#00858383"
-    app:layout_constraintBottom_toBottomOf="@+id/trocar_retanguloBrita"
-    app:layout_constraintEnd_toEndOf="@+id/trocar_retanguloBrita"
-    app:layout_constraintHorizontal_bias="0.448"
-    app:layout_constraintStart_toStartOf="@+id/trocar_retanguloBrita"
-    app:layout_constraintTop_toBottomOf="@+id/trocar_retanguloBitcoin"
-    app:layout_constraintVertical_bias="0.398"
-    app:srcCompat="@drawable/ic_linha_reta"
-    tools:ignore="VectorDrawableCompat" />
-
     <ImageView
-        android:id="@+id/trocar_linha4"
+        android:id="@+id/trocar_linhaBitcoin"
         android:layout_width="340dp"
         android:layout_height="5dp"
         android:layout_marginTop="84dp"
         android:contentDescription="TODO"
         android:tint="#00858383"
-        app:layout_constraintEnd_toStartOf="@+id/guideline7"
-        app:layout_constraintHorizontal_bias="0.366"
-        app:layout_constraintStart_toStartOf="@+id/guideline10"
+        app:layout_constraintEnd_toEndOf="@+id/trocar_retanguloBitcoin"
+        app:layout_constraintStart_toStartOf="@+id/trocar_retanguloBitcoin"
         app:layout_constraintTop_toTopOf="@+id/trocar_retanguloBitcoin"
         app:srcCompat="@drawable/ic_linha_reta"
         tools:ignore="VectorDrawableCompat" />
 
-<TextView
-    android:id="@+id/trocar_valorCompradoBitcoin"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_marginBottom="100dp"
-    android:text="@string/comp"
-    app:layout_constraintBottom_toBottomOf="@+id/trocar_retanguloBitcoin"
-    app:layout_constraintEnd_toEndOf="@+id/trocar_retanguloBitcoin"
-    app:layout_constraintHorizontal_bias="0.295"
-    app:layout_constraintStart_toStartOf="@+id/trocar_retanguloBitcoin" />
+    <TextView
+        android:id="@+id/trocar_valorCompradoBitcoin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
+        android:layout_marginLeft="64dp"
+        android:text="@string/comp"
+        app:layout_constraintStart_toStartOf="@+id/trocar_retanguloBitcoin"
+        app:layout_constraintTop_toBottomOf="@+id/trocar_linhaBitcoin" />
 
-<TextView
-    android:id="@+id/trocar_valorCompradoBrita"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_marginBottom="108dp"
-    android:text="@string/comp"
-    app:layout_constraintBottom_toBottomOf="@+id/trocar_retanguloBrita"
-    app:layout_constraintEnd_toEndOf="@+id/trocar_retanguloBrita"
-    app:layout_constraintHorizontal_bias="0.315"
-    app:layout_constraintStart_toStartOf="@+id/trocar_retanguloBrita" />
-
-<TextView
-    android:id="@+id/trocar_logoBrita"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_marginStart="8dp"
-    android:layout_marginLeft="8dp"
-    android:layout_marginTop="8dp"
-    android:text="@string/brita"
-    android:textColor="#0C0C0C"
-    android:textSize="24sp"
-    android:textStyle="bold"
-    app:layout_constraintBottom_toBottomOf="@+id/trocar_retanguloBrita"
-    app:layout_constraintEnd_toStartOf="@+id/guideline7"
-    app:layout_constraintHorizontal_bias="0.097"
-    app:layout_constraintStart_toStartOf="@+id/guideline10"
-    app:layout_constraintTop_toBottomOf="@+id/trocar_retanguloBitcoin"
-    app:layout_constraintVertical_bias="0.228" />
-
-<ImageView
-    android:id="@+id/trocar_logoBitcoin"
-    android:layout_width="35dp"
-    android:layout_height="35dp"
-    android:layout_marginStart="28dp"
-    android:layout_marginLeft="28dp"
-    app:layout_constraintBottom_toTopOf="@+id/trocar_linha4"
-    app:layout_constraintStart_toStartOf="@+id/guideline10"
-    app:srcCompat="@drawable/ic_bitcoin" />
-
-<TextView
-    android:id="@+id/trocar_quantidadeDeBitcoin"
-    android:layout_width="23dp"
-    android:layout_height="32dp"
-    android:layout_marginTop="52dp"
-    android:text="3"
-    android:textColor="#F8161515"
-    android:textSize="24sp"
-    app:layout_constraintEnd_toStartOf="@+id/guideline7"
-    app:layout_constraintHorizontal_bias="0.219"
-    app:layout_constraintStart_toStartOf="@+id/trocar_retanguloBitcoin"
-    app:layout_constraintTop_toTopOf="@+id/trocar_retanguloBitcoin" />
+    <ImageView
+        android:id="@+id/trocar_bitcoinLogo"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="50dp"
+        app:layout_constraintStart_toStartOf="@+id/trocar_retanguloBitcoin"
+        app:layout_constraintTop_toTopOf="@+id/trocar_retanguloBitcoin"
+        app:srcCompat="@drawable/ic_bitcoin" />
 
     <TextView
-        android:id="@+id/trocar_quantidadeDeBrita"
+        android:id="@+id/trocar_quantidadeDeBitcoin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="244dp"
-        android:layout_marginRight="244dp"
-        android:layout_marginBottom="8dp"
-        android:text="100"
-        android:textColor="#0F0F0F"
+        android:layout_marginTop="58dp"
+        android:text="3"
+        android:textColor="#F8161515"
         android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="@+id/trocar_retanguloBrita"
-        app:layout_constraintEnd_toStartOf="@+id/guideline7"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/textView3"
-        app:layout_constraintTop_toBottomOf="@+id/trocar_retanguloBitcoin"
-        app:layout_constraintVertical_bias="0.25" />
+        app:layout_constraintStart_toEndOf="@+id/trocar_bitcoinLogo"
+        app:layout_constraintTop_toTopOf="@+id/trocar_retanguloBitcoin" />
 
-<TextView
-    android:id="@+id/trocar_reaisBrita"
-    android:layout_width="24dp"
-    android:layout_height="20dp"
-    android:layout_marginStart="8dp"
-    android:layout_marginLeft="8dp"
-    android:layout_marginTop="60dp"
-    android:layout_marginEnd="8dp"
-    android:layout_marginRight="8dp"
-    android:text="@string/money"
-    app:layout_constraintEnd_toStartOf="@+id/guideline7"
-    app:layout_constraintHorizontal_bias="0.569"
-    app:layout_constraintStart_toStartOf="@+id/guideline10"
-    app:layout_constraintTop_toBottomOf="@+id/trocar_retanguloBitcoin" />
-
-<TextView
-    android:id="@+id/trocar_reaisBitcoin"
-    android:layout_width="20dp"
-    android:layout_height="22dp"
-    android:layout_marginStart="8dp"
-    android:layout_marginLeft="8dp"
-    android:layout_marginTop="64dp"
-    android:layout_marginEnd="8dp"
-    android:layout_marginRight="8dp"
-    android:text="@string/money"
-    app:layout_constraintEnd_toStartOf="@+id/guideline7"
-    app:layout_constraintHorizontal_bias="0.574"
-    app:layout_constraintStart_toStartOf="@+id/guideline10"
-    app:layout_constraintTop_toTopOf="@+id/trocar_retanguloBitcoin" />
-
-<TextView
-    android:id="@+id/trocar_dinheiroCompradoBrita"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_marginBottom="108dp"
-    android:text="3,90"
-    app:layout_constraintBottom_toBottomOf="@+id/trocar_retanguloBrita"
-    app:layout_constraintEnd_toStartOf="@+id/guideline7"
-    app:layout_constraintHorizontal_bias="0.045"
-    app:layout_constraintStart_toEndOf="@+id/trocar_valorCompradoBrita" />
-
-<TextView
-    android:id="@+id/trocar_unitarioBrita"
-    android:layout_width="55dp"
-    android:layout_height="18dp"
-    android:layout_marginTop="60dp"
-    android:text="@string/unitario"
-    app:layout_constraintEnd_toStartOf="@+id/guideline7"
-    app:layout_constraintHorizontal_bias="0.784"
-    app:layout_constraintStart_toEndOf="@+id/trocar_dinheiroCompradoBrita"
-    app:layout_constraintTop_toBottomOf="@+id/trocar_retanguloBitcoin" />
-
-<TextView
-    android:id="@+id/trocar_unitarioBrita2"
-    android:layout_width="55dp"
-    android:layout_height="18dp"
-    android:layout_marginBottom="108dp"
-    android:text="@string/unitario"
-    app:layout_constraintBottom_toBottomOf="@+id/trocar_retanguloBrita"
-    app:layout_constraintEnd_toStartOf="@+id/guideline7"
-    app:layout_constraintHorizontal_bias="0.484"
-    app:layout_constraintStart_toEndOf="@+id/trocar_dinheiroCompradoBrita" />
-
-<android.support.constraint.Guideline
-    android:id="@+id/guideline11"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:orientation="vertical"
-    app:layout_constraintGuide_begin="205dp" />
-
-<android.support.constraint.Guideline
-    android:id="@+id/guideline12"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:orientation="vertical"
-    app:layout_constraintGuide_begin="99dp" />
+    <TextView
+        android:id="@+id/trocar_reaisBitcoin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="65dp"
+        android:text="@string/money"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/trocar_quantidadeDeBitcoin"
+        app:layout_constraintTop_toTopOf="@+id/trocar_retanguloBitcoin" />
 
     <TextView
         android:id="@+id/trocar_dinheiroCompradoBitcoin"
@@ -344,175 +156,248 @@ tools:context=".Fragments.TrocarFragment">
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="3dp"
         android:text="15.754,50"
+        app:layout_constraintStart_toEndOf="@+id/trocar_valorCompradoBitcoin"
+        app:layout_constraintTop_toBottomOf="@+id/trocar_linhaBitcoin" />
+
+    <TextView
+        android:id="@+id/trocar_unitarioBitcoin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="68dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:text="@string/unitario"
+        android:textColor="@android:color/black"
         app:layout_constraintEnd_toEndOf="@+id/trocar_retanguloBitcoin"
-        app:layout_constraintHorizontal_bias="0.618"
-        app:layout_constraintStart_toStartOf="@+id/trocar_retanguloBitcoin"
-        app:layout_constraintTop_toBottomOf="@+id/trocar_linha4" />
+        app:layout_constraintTop_toTopOf="@+id/trocar_retanguloBitcoin" />
 
-<android.support.constraint.Guideline
-    android:id="@+id/guideline13"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:orientation="vertical"
-    app:layout_constraintGuide_begin="285dp" />
-
-<TextView
-    android:id="@+id/trocar_unitarioBitcoin"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_marginStart="8dp"
-    android:layout_marginLeft="8dp"
-    android:layout_marginEnd="8dp"
-    android:layout_marginRight="8dp"
-    android:layout_marginBottom="100dp"
-    android:text="@string/unitario"
-    app:layout_constraintBottom_toBottomOf="@+id/trocar_retanguloBitcoin"
-    app:layout_constraintEnd_toEndOf="@+id/trocar_retanguloBitcoin"
-    app:layout_constraintHorizontal_bias="0.842"
-    app:layout_constraintStart_toStartOf="@+id/guideline10" />
-
-<TextView
-    android:id="@+id/trocar_quantidadeBitcoin"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_marginStart="8dp"
-    android:layout_marginLeft="8dp"
-    android:layout_marginTop="96dp"
-    android:text="@string/quantidade"
-    android:textSize="20sp"
-    app:layout_constraintBottom_toTopOf="@+id/trocar_retanguloBrita"
-    app:layout_constraintEnd_toEndOf="@+id/trocar_retanguloBitcoin"
-    app:layout_constraintHorizontal_bias="0.023"
-    app:layout_constraintStart_toStartOf="@+id/trocar_retanguloBitcoin"
-    app:layout_constraintTop_toTopOf="@+id/trocar_retanguloBitcoin" />
-
-<TextView
-    android:id="@+id/trocar_quantidadeBrita"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_marginTop="8dp"
-    android:layout_marginBottom="8dp"
-    android:text="@string/quantidade"
-    android:textSize="20sp"
-    app:layout_constraintBottom_toBottomOf="@+id/trocar_retanguloBrita"
-    app:layout_constraintEnd_toEndOf="@+id/trocar_retanguloBrita"
-    app:layout_constraintHorizontal_bias="0.05"
-    app:layout_constraintStart_toStartOf="@+id/trocar_retanguloBrita"
-    app:layout_constraintTop_toBottomOf="@+id/trocar_retanguloBitcoin"
-    app:layout_constraintVertical_bias="0.88" />
+    <TextView
+        android:id="@+id/trocar_quantidadeBitcoin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="28dp"
+        android:text="@string/quantidade"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/trocar_retanguloBitcoin"
+        app:layout_constraintStart_toStartOf="@+id/trocar_retanguloBitcoin" />
 
     <EditText
         android:id="@+id/trocar_numeroVendaBitcoin"
-        android:layout_width="124dp"
-        android:layout_height="46dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="32dp"
+        android:layout_width="98dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginBottom="24dp"
         android:backgroundTint="@android:color/black"
         android:ems="10"
         android:inputType="numberDecimal"
         android:textCursorDrawable="@android:color/background_dark"
         app:layout_constraintBottom_toBottomOf="@+id/trocar_retanguloBitcoin"
-        app:layout_constraintEnd_toEndOf="@+id/trocar_retanguloBitcoin"
-        app:layout_constraintHorizontal_bias="0.493"
-        app:layout_constraintStart_toStartOf="@+id/guideline10" />
+        app:layout_constraintStart_toEndOf="@+id/trocar_quantidadeBitcoin" />
 
-<EditText
-    android:id="@+id/trocar_numeroVendaBrita2"
-    android:layout_width="124dp"
-    android:layout_height="46dp"
-    android:layout_marginEnd="8dp"
-    android:layout_marginRight="8dp"
-    android:layout_marginBottom="28dp"
-    android:backgroundTint="@android:color/black"
-    android:ems="10"
-    android:inputType="numberDecimal"
-    android:textCursorDrawable="@android:color/background_dark"
-    app:layout_constraintBottom_toBottomOf="@+id/trocar_retanguloBrita"
-    app:layout_constraintEnd_toEndOf="@+id/trocar_retanguloBrita"
-    app:layout_constraintHorizontal_bias="0.518"
-    app:layout_constraintStart_toStartOf="@+id/trocar_retanguloBrita" />
+    <TextView
+        android:id="@+id/trocar_palavraBitcoin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginBottom="28dp"
+        android:text="Bitcoin"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/trocar_retanguloBitcoin"
+        app:layout_constraintEnd_toEndOf="@+id/trocar_retanguloBitcoin" />
 
-<TextView
-    android:id="@+id/trocar_palavraBitcoin"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_marginStart="8dp"
-    android:layout_marginLeft="8dp"
-    android:layout_marginBottom="44dp"
-    android:text="Bitcoin"
-    android:textSize="20sp"
-    app:layout_constraintBottom_toBottomOf="@+id/trocar_retanguloBitcoin"
-    app:layout_constraintEnd_toEndOf="@+id/trocar_retanguloBitcoin"
-    app:layout_constraintHorizontal_bias="0.865"
-    app:layout_constraintStart_toStartOf="@+id/trocar_retanguloBitcoin" />
-
-<TextView
-    android:id="@+id/trocar_palavraBrita"
-    android:layout_width="wrap_content"
-    android:layout_height="0dp"
-    android:layout_marginEnd="8dp"
-    android:layout_marginRight="8dp"
-    android:layout_marginBottom="28dp"
-    android:text="Brita"
-    android:textSize="20sp"
-    app:layout_constraintBottom_toBottomOf="@+id/trocar_retanguloBrita"
-    app:layout_constraintEnd_toEndOf="@+id/trocar_retanguloBrita"
-    app:layout_constraintHorizontal_bias="0.845"
-    app:layout_constraintStart_toStartOf="@+id/trocar_retanguloBrita" />
-
-<TextView
-    android:id="@+id/trocar_quantoValeBitcoin"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_marginTop="64dp"
-    android:layout_marginEnd="8dp"
-    android:layout_marginRight="8dp"
-    android:text="20.691,40"
-    app:layout_constraintEnd_toEndOf="@+id/trocar_retanguloBitcoin"
-    app:layout_constraintHorizontal_bias="0.745"
-    app:layout_constraintStart_toStartOf="@+id/trocar_retanguloBitcoin"
-    app:layout_constraintTop_toTopOf="@+id/trocar_retanguloBitcoin" />
-
-<TextView
-    android:id="@+id/trocar_palavraUnitárioBitcoin"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_marginTop="64dp"
-    android:layout_marginEnd="8dp"
-    android:layout_marginRight="8dp"
-    android:text="@string/unitario"
-    app:layout_constraintEnd_toEndOf="@+id/trocar_retanguloBitcoin"
-    app:layout_constraintHorizontal_bias="0.971"
-    app:layout_constraintStart_toStartOf="@+id/trocar_retanguloBitcoin"
-    app:layout_constraintTop_toTopOf="@+id/trocar_retanguloBitcoin" />
-
-<TextView
-    android:id="@+id/trocar_quantoValeBrita"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_marginTop="60dp"
-    android:layout_marginEnd="8dp"
-    android:layout_marginRight="8dp"
-    android:text="3,93"
-    app:layout_constraintEnd_toEndOf="@+id/trocar_retanguloBrita"
-    app:layout_constraintHorizontal_bias="0.67"
-    app:layout_constraintStart_toStartOf="@+id/trocar_retanguloBrita"
-    app:layout_constraintTop_toBottomOf="@+id/trocar_retanguloBitcoin" />
-
-    <ImageView
-        android:id="@+id/trocar_botaoTroca"
+    <TextView
+        android:id="@+id/trocar_quantoValeBitcoin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="4dp"
+        android:layout_marginTop="65dp"
+        android:text="20.691,40"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/trocar_reaisBitcoin"
+        app:layout_constraintTop_toTopOf="@+id/trocar_retanguloBitcoin" />
+
+    <TextView
+        android:id="@+id/trocar_palavraUnitárioBitcoin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:text="@string/unitario"
+        app:layout_constraintEnd_toEndOf="@+id/trocar_retanguloBitcoin"
+        app:layout_constraintTop_toBottomOf="@+id/trocar_linhaBitcoin" />
+
+    <ImageView
+        android:id="@+id/trocar_retanguloBrita"
+        android:layout_width="360dp"
+        android:layout_height="186dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/trocar_retanguloBitcoin"
+        app:srcCompat="@drawable/ic_retangulo_vender" />
+
+    <ImageView
+        android:id="@+id/trocar_linhaBrita"
+        android:layout_width="340dp"
+        android:layout_height="5dp"
+        android:layout_marginTop="84dp"
+        android:contentDescription="TODO"
+        android:tint="#00858383"
+        app:layout_constraintEnd_toEndOf="@+id/trocar_retanguloBrita"
+        app:layout_constraintStart_toStartOf="@+id/trocar_retanguloBrita"
+        app:layout_constraintTop_toTopOf="@+id/trocar_retanguloBrita"
+        app:srcCompat="@drawable/ic_linha_reta"
+        tools:ignore="VectorDrawableCompat" />
+
+    <TextView
+        android:id="@+id/trocar_valorCompradoBrita"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
+        android:layout_marginLeft="64dp"
+        android:text="@string/comp"
+        app:layout_constraintStart_toStartOf="@+id/trocar_retanguloBrita"
+        app:layout_constraintTop_toBottomOf="@+id/trocar_linhaBrita" />
+
+    <TextView
+        android:id="@+id/trocar_quantidadeDeBrita"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="58dp"
+        android:text="1200000"
+        android:textColor="#F8161515"
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@+id/trocar_britaLogo"
+        app:layout_constraintTop_toTopOf="@+id/trocar_retanguloBrita" />
+
+    <TextView
+        android:id="@+id/trocar_reaisBrita"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="65dp"
+        android:text="@string/money"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/trocar_quantidadeDeBrita"
+        app:layout_constraintTop_toTopOf="@+id/trocar_retanguloBrita" />
+
+    <TextView
+        android:id="@+id/trocar_dinheiroCompradoBrita"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:text="4,25"
+        app:layout_constraintStart_toEndOf="@+id/trocar_valorCompradoBrita"
+        app:layout_constraintTop_toBottomOf="@+id/trocar_linhaBrita" />
+
+    <TextView
+        android:id="@+id/trocar_unitarioBrita"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="68dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:text="@string/unitario"
+        android:textColor="@android:color/black"
+        app:layout_constraintEnd_toEndOf="@+id/trocar_retanguloBrita"
+        app:layout_constraintTop_toTopOf="@+id/trocar_retanguloBrita" />
+
+    <TextView
+        android:id="@+id/trocar_quantidadeBrita"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="28dp"
+        android:text="@string/quantidade"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/trocar_retanguloBrita"
+        app:layout_constraintStart_toStartOf="@+id/trocar_retanguloBrita" />
+
+    <EditText
+        android:id="@+id/trocar_numeroVendaBrita"
+        android:layout_width="98dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginBottom="24dp"
+        android:backgroundTint="@android:color/black"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:textCursorDrawable="@android:color/background_dark"
+        app:layout_constraintBottom_toBottomOf="@+id/trocar_retanguloBrita"
+        app:layout_constraintStart_toEndOf="@+id/trocar_quantidadeBrita" />
+
+    <TextView
+        android:id="@+id/trocar_palavraBrita"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginBottom="28dp"
+        android:text="Brita"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/trocar_retanguloBrita"
+        app:layout_constraintEnd_toEndOf="@+id/trocar_retanguloBrita" />
+
+    <TextView
+        android:id="@+id/trocar_quantoValeBrita"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="65dp"
+        android:text="4,40"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/trocar_reaisBrita"
+        app:layout_constraintTop_toTopOf="@+id/trocar_retanguloBrita" />
+
+    <TextView
+        android:id="@+id/trocar_palavraUnitárioBrita"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:text="@string/unitario"
+        app:layout_constraintEnd_toEndOf="@+id/trocar_retanguloBrita"
+        app:layout_constraintTop_toBottomOf="@+id/trocar_linhaBrita" />
+
+    <TextView
+        android:id="@+id/trocar_britaLogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="50dp"
+        android:shadowColor="#00070707"
+        android:text="@string/brita"
+        android:textColor="#161616"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/trocar_retanguloBrita"
+        app:layout_constraintTop_toTopOf="@+id/trocar_retanguloBrita" />
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:src="@drawable/ic_exchange_black_24dp"
         app:layout_constraintBottom_toTopOf="@+id/trocar_retanguloBrita"
         app:layout_constraintEnd_toEndOf="parent"
