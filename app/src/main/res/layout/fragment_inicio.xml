@@ -7,25 +7,18 @@
     tools:context=".Fragments.InicioFragment">
 
     <android.support.constraint.Guideline
-        android:id="@+id/guideline3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.09" />
-
-    <android.support.constraint.Guideline
         android:id="@+id/guideline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_end="395dp" />
+        app:layout_constraintGuide_percent="0.05" />
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_end="16dp" />
+        app:layout_constraintGuide_percent="0.9537713" />
 
     <Button
         android:id="@+id/inicio_logout"
@@ -45,12 +38,12 @@
         android:id="@+id/inicio_bitcoinLogoCirculo"
         android:layout_width="35dp"
         android:layout_height="35dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="48dp"
         android:contentDescription="TODO"
-        app:layout_constraintEnd_toStartOf="@+id/guideline5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline3"
+        app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_bitcoin" />
 
     <android.support.constraint.Guideline
@@ -64,116 +57,83 @@
         android:id="@+id/inicio_linhaTopoEsquerda"
         android:layout_width="114dp"
         android:layout_height="3dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginLeft="52dp"
         android:contentDescription="TODO"
-        app:layout_constraintStart_toStartOf="@+id/guideline5"
-        app:layout_constraintTop_toTopOf="@+id/guideline3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inicio_bitcoinLogoCirculo"
         app:srcCompat="@drawable/ic_linha_reta" />
 
     <ImageView
         android:id="@+id/inicio_linhaTopoDireita"
-        android:layout_width="117dp"
-        android:layout_height="4dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginRight="32dp"
+        android:layout_width="114dp"
+        android:layout_height="3dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
         android:contentDescription="TODO"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline3"
+        app:layout_constraintTop_toBottomOf="@+id/inicio_britaLogo"
         app:srcCompat="@drawable/ic_linha_reta" />
 
     <TextView
         android:id="@+id/inicio_rsTopoEsquerda"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="60dp"
         android:text="@string/money"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/inicio_valorAtualBitcoin"
-        app:layout_constraintEnd_toStartOf="@+id/guideline6"
         app:layout_constraintStart_toEndOf="@+id/inicio_bitcoinLogoCirculo"
-        app:layout_constraintTop_toTopOf="@+id/guideline3"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/inicio_rsTopoDireita"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
         android:text="@string/money"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/inicio_valorAtualBrita"
-        app:layout_constraintEnd_toStartOf="@+id/guideline9"
-        app:layout_constraintStart_toEndOf="@+id/inicio_britaLogo"
-        app:layout_constraintTop_toTopOf="@+id/guideline3"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintEnd_toStartOf="@+id/inicio_valorAtualBrita"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/inicio_valorAtualBitcoin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="56dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="60dp"
         android:text="1024,00"
         android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/inicio_linhaTopoEsquerda"
-        app:layout_constraintEnd_toStartOf="@+id/inicio_britaLogo"
-        app:layout_constraintHorizontal_bias="0.09"
         app:layout_constraintStart_toEndOf="@+id/inicio_rsTopoEsquerda"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/inicio_valorAtualBrita"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginRight="40dp"
         android:text="1024,00"
         android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="@+id/guideline9"
-        app:layout_constraintTop_toTopOf="@+id/guideline3" />
-
-    <android.support.constraint.Guideline
-        android:id="@+id/guideline6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_begin="79dp" />
-
-    <android.support.constraint.Guideline
-        android:id="@+id/guideline7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_begin="85dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/inicio_britaLogo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="48dp"
         android:text="@string/brita"
         android:textColor="@android:color/black"
         android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/guideline15"
-        app:layout_constraintTop_toTopOf="@+id/guideline3" />
-
-    <android.support.constraint.Guideline
-        android:id="@+id/guideline9"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_begin="283dp" />
+        app:layout_constraintEnd_toStartOf="@+id/inicio_rsTopoDireita"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline4"
@@ -201,11 +161,10 @@
         android:id="@+id/inicio_linhaCirculoSuperior"
         android:layout_width="233dp"
         android:layout_height="14dp"
-        android:layout_marginTop="104dp"
         android:tint="@android:color/darker_gray"
         app:layout_constraintEnd_toEndOf="@+id/inicio_circuloCentral"
         app:layout_constraintStart_toStartOf="@+id/inicio_circuloCentral"
-        app:layout_constraintTop_toTopOf="@+id/inicio_circuloCentral"
+        app:layout_constraintTop_toBottomOf="@+id/inicio_valorDisponivel"
         app:srcCompat="@drawable/ic_linha_reta" />
 
     <ImageView
@@ -222,7 +181,7 @@
     <TextView
         android:id="@+id/inicio_valorDisponivel"
         android:layout_width="wrap_content"
-        android:layout_height="52dp"
+        android:layout_height="49dp"
         android:layout_marginTop="64dp"
         android:text="100.000,00"
         android:textSize="40dp"
@@ -239,62 +198,60 @@
         android:text="@string/money"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/inicio_circuloCentral"
-        app:layout_constraintHorizontal_bias="0.192"
-        app:layout_constraintStart_toStartOf="@+id/inicio_circuloCentral"
+        app:layout_constraintEnd_toStartOf="@+id/inicio_valorDisponivel"
         app:layout_constraintTop_toTopOf="@+id/inicio_circuloCentral" />
 
     <TextView
         android:id="@+id/inicio_rsCiruloEsquerda"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="118dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="8dp"
         android:text="@string/money"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/inicio_circuloCentral"
-        app:layout_constraintEnd_toEndOf="@+id/inicio_circuloCentral"
-        app:layout_constraintHorizontal_bias="0.14"
-        app:layout_constraintStart_toStartOf="@+id/inicio_circuloCentral" />
+        app:layout_constraintStart_toStartOf="@+id/inicio_circuloCentral"
+        app:layout_constraintTop_toBottomOf="@+id/inicio_bitcoinCirculo" />
 
     <TextView
         android:id="@+id/inicio_rsCiruloDireita"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="118dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="156dp"
+        android:layout_marginRight="156dp"
         android:text="@string/money"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/inicio_circuloCentral"
         app:layout_constraintEnd_toEndOf="@+id/inicio_circuloCentral"
-        app:layout_constraintHorizontal_bias="0.519"
-        app:layout_constraintStart_toStartOf="@+id/inicio_circuloCentral" />
+        app:layout_constraintTop_toBottomOf="@+id/inicio_britaCiculo" />
 
     <ImageView
         android:id="@+id/inicio_bitcoinCirculo"
         android:layout_width="35dp"
         android:layout_height="35dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="144dp"
+        android:layout_marginStart="68dp"
+        android:layout_marginLeft="68dp"
+        android:layout_marginTop="24dp"
         android:contentDescription="TODO"
-        app:layout_constraintStart_toStartOf="@+id/inicio_linhaCirculoSuperior"
-        app:layout_constraintTop_toTopOf="@+id/inicio_circuloCentral"
+        app:layout_constraintStart_toStartOf="@+id/inicio_circuloCentral"
+        app:layout_constraintTop_toBottomOf="@+id/inicio_linhaCirculoSuperior"
         app:srcCompat="@drawable/ic_bitcoin" />
 
     <TextView
         android:id="@+id/inicio_britaCiculo"
         android:layout_width="wrap_content"
         android:layout_height="26dp"
-        android:layout_marginTop="148dp"
-        android:layout_marginEnd="68dp"
-        android:layout_marginRight="68dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="132dp"
+        android:layout_marginRight="132dp"
         android:text="@string/brita"
         android:textColor="@android:color/black"
         android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/inicio_linhaCirculoSuperior"
-        app:layout_constraintTop_toTopOf="@+id/inicio_circuloCentral" />
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toBottomOf="@+id/inicio_linhaCirculoSuperior" />
 
     <TextView
         android:id="@+id/inicio_totalTexto"
@@ -313,33 +270,33 @@
     <TextView
         android:id="@+id/inicio_bitcoinComprado"
         android:layout_width="wrap_content"
-        android:layout_height="21dp"
-        android:layout_marginStart="12dp"
-        android:layout_marginLeft="12dp"
-        android:layout_marginTop="40dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="36dp"
         android:text="3"
         android:textSize="18sp"
         app:layout_constraintStart_toEndOf="@+id/inicio_bitcoinCirculo"
-        app:layout_constraintTop_toBottomOf="@+id/inicio_valorDisponivel" />
+        app:layout_constraintTop_toBottomOf="@+id/inicio_linhaCirculoSuperior" />
 
     <TextView
         android:id="@+id/inicio_britaComprado"
         android:layout_width="wrap_content"
-        android:layout_height="21dp"
-        android:layout_marginStart="12dp"
-        android:layout_marginLeft="12dp"
-        android:layout_marginTop="40dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="36dp"
         android:text="210"
         android:textSize="18sp"
         app:layout_constraintStart_toEndOf="@+id/inicio_britaCiculo"
-        app:layout_constraintTop_toBottomOf="@+id/inicio_valorDisponivel" />
+        app:layout_constraintTop_toBottomOf="@+id/inicio_linhaCirculoSuperior" />
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline13"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_end="332dp" />
+        app:layout_constraintGuide_percent="0.5471956" />
 
     <TextView
         android:id="@+id/inicio_totalComCompras"
@@ -357,25 +314,21 @@
         android:id="@+id/inicio_bitcoinRS"
         android:layout_width="wrap_content"
         android:layout_height="22dp"
-        android:layout_marginStart="72dp"
-        android:layout_marginLeft="72dp"
-        android:layout_marginBottom="120dp"
+        android:layout_marginTop="8dp"
         android:text="60.004,00"
         android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="@+id/inicio_circuloCentral"
-        app:layout_constraintStart_toStartOf="@+id/guideline" />
+        app:layout_constraintStart_toEndOf="@+id/inicio_rsCiruloEsquerda"
+        app:layout_constraintTop_toBottomOf="@+id/inicio_bitcoinCirculo" />
 
     <TextView
         android:id="@+id/inicio_britaRS"
         android:layout_width="wrap_content"
         android:layout_height="22dp"
-        android:layout_marginBottom="120dp"
+        android:layout_marginTop="8dp"
         android:text="128.004,00"
         android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="@+id/inicio_circuloCentral"
-        app:layout_constraintEnd_toEndOf="@+id/inicio_circuloCentral"
-        app:layout_constraintHorizontal_bias="0.408"
-        app:layout_constraintStart_toEndOf="@+id/inicio_bitcoinRS" />
+        app:layout_constraintStart_toEndOf="@+id/inicio_rsCiruloDireita"
+        app:layout_constraintTop_toBottomOf="@+id/inicio_britaCiculo" />
 
     <TextView
         android:id="@+id/inicio_rsCiruloInferior"
@@ -387,12 +340,5 @@
         app:layout_constraintEnd_toEndOf="@+id/inicio_circuloCentral"
         app:layout_constraintHorizontal_bias="0.355"
         app:layout_constraintStart_toStartOf="@+id/inicio_circuloCentral" />
-
-    <android.support.constraint.Guideline
-        android:id="@+id/guideline15"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.5" />
 
 </android.support.constraint.ConstraintLayout>

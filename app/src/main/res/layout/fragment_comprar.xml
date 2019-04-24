@@ -7,30 +7,42 @@
     tools:context=".Fragments.ComprarFragment">
 
     <ImageView
-        android:id="@+id/comprar_retangulo"
-        android:layout_width="360dp"
-        android:layout_height="150dp"
-        android:layout_marginTop="20dp"
+        android:id="@+id/comprar_linhaValorDisponivel"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:contentDescription="TODO"
+        android:tint="#F5181616"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/comprar_stoneLogo"
-        app:srcCompat="@drawable/ic_retangulo_fundo"
+        app:layout_constraintTop_toBottomOf="@+id/comprar_valorDisponivel"
+        app:srcCompat="@drawable/ic_linha_reta"
         tools:ignore="VectorDrawableCompat" />
 
     <ImageView
-        android:id="@+id/comprar_retangulo3"
-        android:layout_width="360dp"
-        android:layout_height="150dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
+        android:id="@+id/comprar_linhaInferiorConfirmar"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:contentDescription="TODO"
+        android:tint="#F5181616"
+        app:layout_constraintBottom_toTopOf="@+id/comprar_confirmar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/comprar_retangulo"
-        app:srcCompat="@drawable/ic_retangulo_fundo"
+        app:srcCompat="@drawable/ic_linha_reta"
         tools:ignore="VectorDrawableCompat" />
+
+    <TextView
+        android:id="@+id/comprar_reaisTopo"
+        android:layout_width="0dp"
+        android:layout_height="28dp"
+        android:layout_marginTop="44dp"
+        android:text="@string/money"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/comprar_valorDisponivel"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/comprar_valorDisponivel"
@@ -46,31 +58,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:id="@+id/comprar_stoneLogo"
-        android:layout_width="138dp"
-        android:layout_height="97dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginLeft="24dp"
-        android:layout_marginTop="16dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/stone_pagamentos" />
-
     <TextView
-        android:id="@+id/comprar_reaisTopo"
-        android:layout_width="0dp"
-        android:layout_height="28dp"
-        android:layout_marginTop="44dp"
-        android:text="@string/money"
-        android:textColor="@android:color/black"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toStartOf="@+id/comprar_valorDisponivel"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/compas_textoValordisp"
+        android:id="@+id/comprar_textoValordisp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="44dp"
@@ -82,189 +71,203 @@
         app:layout_constraintTop_toBottomOf="@+id/comprar_valorDisponivel" />
 
     <ImageView
-        android:id="@+id/comprar_logoBitcoin"
+        android:id="@+id/comprar_logoStone"
+        android:layout_width="138dp"
+        android:layout_height="97dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/stone_pagamentos" />
+
+
+    <ImageView
+        android:id="@+id/comprar_retanguloBitcoin"
+        android:layout_width="360dp"
+        android:layout_height="186dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/comprar_logoStone"
+        app:srcCompat="@drawable/ic_retangulo_vender" />
+
+    <ImageView
+        android:id="@+id/comprar_linhaBitcoin"
+        android:layout_width="340dp"
+        android:layout_height="5dp"
+        android:layout_marginTop="84dp"
+        android:contentDescription="TODO"
+        android:tint="#00858383"
+        app:layout_constraintEnd_toEndOf="@+id/comprar_retanguloBitcoin"
+        app:layout_constraintStart_toStartOf="@+id/comprar_retanguloBitcoin"
+        app:layout_constraintTop_toTopOf="@+id/comprar_retanguloBitcoin"
+        app:srcCompat="@drawable/ic_linha_reta"
+        tools:ignore="VectorDrawableCompat" />
+
+    <ImageView
+        android:id="@+id/comprar_bitcoinLogo"
         android:layout_width="35dp"
         android:layout_height="35dp"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
-        app:layout_constraintBottom_toBottomOf="@+id/comprar_retangulo"
-        app:layout_constraintStart_toStartOf="@+id/comprar_retangulo"
-        app:layout_constraintTop_toTopOf="@+id/comprar_retangulo"
-        app:layout_constraintVertical_bias="0.208"
-        app:srcCompat="@drawable/ic_bitcoin"
-        tools:ignore="VectorDrawableCompat" />
+        android:layout_marginTop="50dp"
+        app:layout_constraintStart_toStartOf="@+id/comprar_retanguloBitcoin"
+        app:layout_constraintTop_toTopOf="@+id/comprar_retanguloBitcoin"
+        app:srcCompat="@drawable/ic_bitcoin" />
 
     <TextView
-        android:id="@+id/comprar_valorBitcoin"
+        android:id="@+id/comprar_quantidadeDeBitcoin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
-        android:layout_marginLeft="4dp"
-        android:text="20.691,00"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="58dp"
+        android:text="3"
+        android:textColor="#F8161515"
         android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="@+id/comprar_retangulo"
-        app:layout_constraintStart_toEndOf="@+id/comprar_reais"
-        app:layout_constraintTop_toTopOf="@+id/comprar_retangulo"
-        app:layout_constraintVertical_bias="0.228" />
+        app:layout_constraintStart_toEndOf="@+id/comprar_bitcoinLogo"
+        app:layout_constraintTop_toTopOf="@+id/comprar_retanguloBitcoin" />
 
     <TextView
-        android:id="@+id/comprar_reais"
+        android:id="@+id/comprar_reaisBitcoin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="65dp"
         android:text="@string/money"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/comprar_retangulo"
-        app:layout_constraintStart_toEndOf="@+id/comprar_logoBitcoin"
-        app:layout_constraintTop_toTopOf="@+id/comprar_retangulo"
-        app:layout_constraintVertical_bias="0.228" />
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/comprar_quantidadeDeBitcoin"
+        app:layout_constraintTop_toTopOf="@+id/comprar_retanguloBitcoin" />
 
     <TextView
-        android:id="@+id/comprar_unitario"
+        android:id="@+id/comprar_unitarioBitcoin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="68dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
         android:text="@string/unitario"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="@+id/comprar_retangulo"
-        app:layout_constraintEnd_toEndOf="@+id/comprar_retangulo"
-        app:layout_constraintHorizontal_bias="0.728"
-        app:layout_constraintStart_toEndOf="@+id/comprar_valorBitcoin"
-        app:layout_constraintTop_toTopOf="@+id/comprar_retangulo"
-        app:layout_constraintVertical_bias="0.26" />
-
-    <ImageView
-        android:id="@+id/comprar_linha2"
-        android:layout_width="340dp"
-        android:layout_height="5dp"
-        android:contentDescription="TODO"
-        android:tint="#00858383"
-        app:layout_constraintBottom_toBottomOf="@+id/comprar_retangulo3"
-        app:layout_constraintEnd_toEndOf="@+id/comprar_retangulo3"
-        app:layout_constraintStart_toStartOf="@+id/comprar_retangulo3"
-        app:layout_constraintTop_toTopOf="@+id/comprar_retangulo3"
-        app:layout_constraintVertical_bias="0.406"
-        app:srcCompat="@drawable/ic_linha_reta"
-        tools:ignore="VectorDrawableCompat" />
-
-    <ImageView
-        android:id="@+id/comprar_linha3"
-        android:layout_width="340dp"
-        android:layout_height="5dp"
-        android:contentDescription="TODO"
-        android:tint="#00858383"
-        app:layout_constraintBottom_toBottomOf="@+id/comprar_retangulo"
-        app:layout_constraintEnd_toEndOf="@+id/comprar_retangulo"
-        app:layout_constraintStart_toStartOf="@+id/comprar_retangulo"
-        app:layout_constraintTop_toTopOf="@+id/comprar_retangulo"
-        app:layout_constraintVertical_bias="0.406"
-        app:srcCompat="@drawable/ic_linha_reta"
-        tools:ignore="VectorDrawableCompat" />
+        android:textColor="@android:color/black"
+        app:layout_constraintEnd_toEndOf="@+id/comprar_retanguloBitcoin"
+        app:layout_constraintTop_toTopOf="@+id/comprar_retanguloBitcoin" />
 
     <TextView
-        android:id="@+id/comprar_quantidade"
+        android:id="@+id/comprar_quantidadeBitcoin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="28dp"
         android:text="@string/quantidade"
+        android:textColor="@android:color/black"
         android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="@+id/comprar_retangulo"
-        app:layout_constraintEnd_toStartOf="@+id/guideline3"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/comprar_retangulo"
-        app:layout_constraintTop_toTopOf="@+id/comprar_retangulo"
-        app:layout_constraintVertical_bias="0.739" />
+        app:layout_constraintBottom_toBottomOf="@+id/comprar_retanguloBitcoin"
+        app:layout_constraintStart_toStartOf="@+id/comprar_retanguloBitcoin" />
 
     <EditText
         android:id="@+id/comprar_numeroCompraBitcoin"
-        android:layout_width="124dp"
-        android:layout_height="46dp"
-        android:layout_marginTop="8dp"
+        android:layout_width="98dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginBottom="24dp"
         android:backgroundTint="@android:color/black"
         android:ems="10"
         android:inputType="numberDecimal"
-        android:textColorLink="#000"
         android:textCursorDrawable="@android:color/background_dark"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="@+id/comprar_retangulo"
-        app:layout_constraintEnd_toStartOf="@+id/guideline2"
-        app:layout_constraintStart_toStartOf="@+id/guideline3"
-        app:layout_constraintTop_toTopOf="@+id/comprar_retangulo"
-        app:layout_constraintVertical_bias="0.692" />
+        app:layout_constraintBottom_toBottomOf="@+id/comprar_retanguloBitcoin"
+        app:layout_constraintStart_toEndOf="@+id/comprar_quantidadeBitcoin" />
 
     <TextView
-        android:id="@+id/compas_palavraBitcoin"
+        android:id="@+id/comprar_palavraBitcoin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginBottom="28dp"
         android:text="Bitcoin"
         android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="@+id/comprar_retangulo"
-        app:layout_constraintEnd_toEndOf="@+id/comprar_retangulo"
-        app:layout_constraintHorizontal_bias="0.256"
-        app:layout_constraintStart_toEndOf="@+id/comprar_numeroCompraBitcoin"
-        app:layout_constraintTop_toTopOf="@+id/comprar_retangulo"
-        app:layout_constraintVertical_bias="0.731" />
+        app:layout_constraintBottom_toBottomOf="@+id/comprar_retanguloBitcoin"
+        app:layout_constraintEnd_toEndOf="@+id/comprar_retanguloBitcoin" />
 
     <TextView
-        android:id="@+id/comprar_logoBrita"
+        android:id="@+id/comprar_quantoValeBitcoin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:shadowColor="#00070707"
-        android:text="@string/brita"
-        android:textColor="#161616"
-        android:textSize="28sp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="65dp"
+        android:text="20.691,40"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/comprar_retangulo3"
-        app:layout_constraintStart_toStartOf="@+id/comprar_retangulo3"
-        app:layout_constraintTop_toTopOf="@+id/comprar_retangulo3"
-        app:layout_constraintVertical_bias="0.187" />
+        app:layout_constraintStart_toEndOf="@+id/comprar_reaisBitcoin"
+        app:layout_constraintTop_toTopOf="@+id/comprar_retanguloBitcoin" />
+
+
+    <ImageView
+        android:id="@+id/comprar_retanguloBrita"
+        android:layout_width="360dp"
+        android:layout_height="186dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/comprar_retanguloBitcoin"
+        app:srcCompat="@drawable/ic_retangulo_vender" />
+
+    <ImageView
+        android:id="@+id/comprar_linhaBrita"
+        android:layout_width="340dp"
+        android:layout_height="5dp"
+        android:layout_marginTop="84dp"
+        android:contentDescription="TODO"
+        android:tint="#00858383"
+        app:layout_constraintEnd_toEndOf="@+id/comprar_retanguloBrita"
+        app:layout_constraintStart_toStartOf="@+id/comprar_retanguloBrita"
+        app:layout_constraintTop_toTopOf="@+id/comprar_retanguloBrita"
+        app:srcCompat="@drawable/ic_linha_reta"
+        tools:ignore="VectorDrawableCompat" />
+
+    <TextView
+        android:id="@+id/comprar_quantidadeDeBrita"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="58dp"
+        android:text="1200000"
+        android:textColor="#F8161515"
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@+id/comprar_britaLogo"
+        app:layout_constraintTop_toTopOf="@+id/comprar_retanguloBrita" />
 
     <TextView
         android:id="@+id/comprar_reaisBrita"
-        android:layout_width="36dp"
-        android:layout_height="45dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:text="@string/money"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/comprar_retangulo3"
-        app:layout_constraintStart_toEndOf="@+id/comprar_logoBrita"
-        app:layout_constraintTop_toTopOf="@+id/comprar_retangulo3"
-        app:layout_constraintVertical_bias="0.228" />
-
-    <TextView
-        android:id="@+id/comprar_valorBrita"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="3,93"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="@+id/comprar_retangulo3"
-        app:layout_constraintStart_toEndOf="@+id/comprar_reaisBrita"
-        app:layout_constraintTop_toTopOf="@+id/comprar_retangulo3"
-        app:layout_constraintVertical_bias="0.203" />
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="65dp"
+        android:text="@string/money"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/comprar_quantidadeDeBrita"
+        app:layout_constraintTop_toTopOf="@+id/comprar_retanguloBrita" />
 
     <TextView
         android:id="@+id/comprar_unitarioBrita"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="68dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
         android:text="@string/unitario"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="@+id/comprar_retangulo3"
-        app:layout_constraintEnd_toEndOf="@+id/comprar_retangulo3"
-        app:layout_constraintHorizontal_bias="0.813"
-        app:layout_constraintStart_toEndOf="@+id/comprar_valorBrita"
-        app:layout_constraintTop_toTopOf="@+id/comprar_retangulo3"
-        app:layout_constraintVertical_bias="0.235" />
-
-    <android.support.constraint.Guideline
-        android:id="@+id/guideline2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_end="117dp" />
+        android:textColor="@android:color/black"
+        app:layout_constraintEnd_toEndOf="@+id/comprar_retanguloBrita"
+        app:layout_constraintTop_toTopOf="@+id/comprar_retanguloBrita" />
 
     <TextView
         android:id="@+id/comprar_quantidadeBrita"
@@ -272,75 +275,86 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginLeft="20dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
+        android:layout_marginBottom="28dp"
         android:text="@string/quantidade"
+        android:textColor="@android:color/black"
         android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="@+id/comprar_retangulo3"
-        app:layout_constraintEnd_toStartOf="@+id/guideline3"
-        app:layout_constraintStart_toStartOf="@+id/comprar_retangulo3"
-        app:layout_constraintTop_toTopOf="@+id/comprar_retangulo3"
-        app:layout_constraintVertical_bias="0.715" />
+        app:layout_constraintBottom_toBottomOf="@+id/comprar_retanguloBrita"
+        app:layout_constraintStart_toStartOf="@+id/comprar_retanguloBrita" />
 
     <EditText
         android:id="@+id/comprar_numeroCompraBrita"
-        android:layout_width="124dp"
-        android:layout_height="46dp"
-        android:layout_marginTop="8dp"
+        android:layout_width="98dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginBottom="24dp"
         android:backgroundTint="@android:color/black"
         android:ems="10"
         android:inputType="numberDecimal"
-        android:textColorLink="#000"
         android:textCursorDrawable="@android:color/background_dark"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="@+id/comprar_retangulo3"
-        app:layout_constraintEnd_toStartOf="@+id/guideline2"
-        app:layout_constraintStart_toStartOf="@+id/guideline3"
-        app:layout_constraintTop_toTopOf="@+id/comprar_retangulo3"
-        app:layout_constraintVertical_bias="0.663" />
+        app:layout_constraintBottom_toBottomOf="@+id/comprar_retanguloBrita"
+        app:layout_constraintStart_toEndOf="@+id/comprar_quantidadeBrita" />
 
     <TextView
         android:id="@+id/comprar_palavraBrita"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginBottom="28dp"
         android:text="Brita"
         android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="@+id/comprar_retangulo3"
-        app:layout_constraintEnd_toEndOf="@+id/comprar_retangulo3"
-        app:layout_constraintHorizontal_bias="0.137"
-        app:layout_constraintStart_toEndOf="@+id/comprar_numeroCompraBrita"
-        app:layout_constraintTop_toTopOf="@+id/comprar_retangulo3"
-        app:layout_constraintVertical_bias="0.715" />
+        app:layout_constraintBottom_toBottomOf="@+id/comprar_retanguloBrita"
+        app:layout_constraintEnd_toEndOf="@+id/comprar_retanguloBrita" />
 
-    <android.support.constraint.Guideline
-        android:id="@+id/guideline3"
+    <TextView
+        android:id="@+id/comprar_quantoValeBrita"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_begin="154dp" />
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="65dp"
+        android:text="4,40"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/comprar_reaisBrita"
+        app:layout_constraintTop_toTopOf="@+id/comprar_retanguloBrita" />
+
+    <TextView
+        android:id="@+id/comprar_britaLogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="50dp"
+        android:shadowColor="#00070707"
+        android:text="@string/brita"
+        android:textColor="#161616"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/comprar_retanguloBrita"
+        app:layout_constraintTop_toTopOf="@+id/comprar_retanguloBrita" />
+
 
     <TextView
         android:id="@+id/comprar_total"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="76dp"
+        android:layout_height="26dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
         android:text="@string/total"
         android:textColor="#111010"
-        android:textSize="24sp"
+        android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/comprar_linhaTotal2"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintBottom_toBottomOf="@+id/comprar_valorTotal"
+        app:layout_constraintEnd_toStartOf="@+id/comprar_linhaInferiorConfirmar" />
 
     <Button
         android:id="@+id/comprar_confirmar"
         android:layout_width="120dp"
         android:layout_height="47dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
         android:background="#24B34D"
         android:text="@string/confirmar"
@@ -350,68 +364,32 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
+        android:id="@+id/comprar_rsTotal"
+        android:layout_width="0dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:text="@string/money"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/comprar_linhaInferiorConfirmar"
+        app:layout_constraintStart_toEndOf="@+id/comprar_total" />
+
+    <TextView
         android:id="@+id/comprar_valorTotal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="76dp"
-        android:gravity="center"
-        android:text="10"
-        android:textColor="#090808"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <ImageView
-        android:id="@+id/comprar_linhaValorDisponivel"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="24dp"
-        android:layout_marginRight="24dp"
-        android:contentDescription="TODO"
-        android:tint="#F5181616"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/comprar_valorDisponivel"
-        app:srcCompat="@drawable/ic_linha_reta"
-        tools:ignore="VectorDrawableCompat" />
-
-    <ImageView
-        android:id="@+id/comprar_linhaTotal2"
-        android:layout_width="100dp"
+        android:layout_width="31dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:layout_marginBottom="24dp"
-        android:contentDescription="TODO"
-        android:tint="#F5181616"
-        app:layout_constraintBottom_toTopOf="@+id/comprar_confirmar"
+        android:gravity="center"
+        android:text="10"
+        android:textColor="#090808"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/comprar_linhaInferiorConfirmar"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/ic_linha_reta"
-        tools:ignore="VectorDrawableCompat" />
-
-    <android.support.constraint.Guideline
-        android:id="@+id/guideline5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_begin="20dp" />
-
-    <android.support.constraint.Guideline
-        android:id="@+id/guideline6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_end="385dp" />
-
-    <android.support.constraint.Guideline
-        android:id="@+id/guideline14"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_begin="44dp" />
-
+        app:layout_constraintStart_toStartOf="parent" />
 
 </android.support.constraint.ConstraintLayout>

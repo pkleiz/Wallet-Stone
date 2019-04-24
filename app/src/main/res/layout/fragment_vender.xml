@@ -8,7 +8,7 @@
     tools:ignore="ExtraText">
 
     <ImageView
-        android:id="@+id/vendas_linhaValorDisponivel"
+        android:id="@+id/vender_linhaValorDisponivel"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="24dp"
@@ -16,25 +16,25 @@
         android:contentDescription="TODO"
         android:tint="#F5181616"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/vendas_valorDisponivel"
+        app:layout_constraintTop_toBottomOf="@+id/vender_valorDisponivel"
         app:srcCompat="@drawable/ic_linha_reta"
         tools:ignore="VectorDrawableCompat" />
 
     <ImageView
-        android:id="@+id/vendas_linhaInferiorConfirmar"
+        android:id="@+id/vender_linhaInferiorConfirmar"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:contentDescription="TODO"
         android:tint="#F5181616"
-        app:layout_constraintBottom_toTopOf="@+id/vendas_confirmar"
+        app:layout_constraintBottom_toTopOf="@+id/vender_confirmar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/ic_linha_reta"
         tools:ignore="VectorDrawableCompat" />
 
     <TextView
-        android:id="@+id/vendas_reaisTopo"
+        android:id="@+id/vender_reaisTopo"
         android:layout_width="0dp"
         android:layout_height="28dp"
         android:layout_marginTop="44dp"
@@ -42,24 +42,11 @@
         android:textColor="@android:color/black"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toStartOf="@+id/vendas_valorDisponivel"
+        app:layout_constraintEnd_toStartOf="@+id/vender_valorDisponivel"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/vendas_rsTotal"
-        android:layout_width="0dp"
-        android:layout_height="28dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:text="@string/money"
-        android:textColor="@android:color/black"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/vendas_linhaInferiorConfirmar"
-        app:layout_constraintStart_toEndOf="@+id/vendas_total" />
-
-    <TextView
-        android:id="@+id/vendas_valorDisponivel"
+        android:id="@+id/vender_valorDisponivel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="44dp"
@@ -73,7 +60,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/vendas_textoValordisp"
+        android:id="@+id/vender_textoValordisp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="44dp"
@@ -82,10 +69,10 @@
         android:text="valor disponível para \n aplicação"
         android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/vendas_valorDisponivel" />
+        app:layout_constraintTop_toBottomOf="@+id/vender_valorDisponivel" />
 
     <ImageView
-        android:id="@+id/vendas_logoStone"
+        android:id="@+id/vender_logoStone"
         android:layout_width="138dp"
         android:layout_height="97dp"
         android:layout_marginStart="24dp"
@@ -96,51 +83,51 @@
         app:srcCompat="@drawable/stone_pagamentos" />
 
     <ImageView
-        android:id="@+id/vendas_retanguloBitcoin"
+        android:id="@+id/vender_retanguloBitcoin"
         android:layout_width="360dp"
         android:layout_height="186dp"
         android:layout_marginTop="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/vendas_logoStone"
+        app:layout_constraintTop_toBottomOf="@+id/vender_logoStone"
         app:srcCompat="@drawable/ic_retangulo_vender" />
 
     <ImageView
-        android:id="@+id/vendas_linhaBitcoin"
+        android:id="@+id/vender_linhaBitcoin"
         android:layout_width="340dp"
         android:layout_height="5dp"
         android:layout_marginTop="84dp"
         android:contentDescription="TODO"
         android:tint="#00858383"
-        app:layout_constraintEnd_toEndOf="@+id/vendas_retanguloBitcoin"
-        app:layout_constraintStart_toStartOf="@+id/vendas_retanguloBitcoin"
-        app:layout_constraintTop_toTopOf="@+id/vendas_retanguloBitcoin"
+        app:layout_constraintEnd_toEndOf="@+id/vender_retanguloBitcoin"
+        app:layout_constraintStart_toStartOf="@+id/vender_retanguloBitcoin"
+        app:layout_constraintTop_toTopOf="@+id/vender_retanguloBitcoin"
         app:srcCompat="@drawable/ic_linha_reta"
         tools:ignore="VectorDrawableCompat" />
 
     <TextView
-        android:id="@+id/vendas_valorCompradoBitcoin"
+        android:id="@+id/vender_valorCompradoBitcoin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="64dp"
         android:layout_marginLeft="64dp"
         android:text="@string/comp"
-        app:layout_constraintStart_toStartOf="@+id/vendas_retanguloBitcoin"
-        app:layout_constraintTop_toBottomOf="@+id/vendas_linhaBitcoin" />
+        app:layout_constraintStart_toStartOf="@+id/vender_retanguloBitcoin"
+        app:layout_constraintTop_toBottomOf="@+id/vender_linhaBitcoin" />
 
     <ImageView
-        android:id="@+id/vendas_bitcoinLogo"
+        android:id="@+id/vender_bitcoinLogo"
         android:layout_width="35dp"
         android:layout_height="35dp"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="50dp"
-        app:layout_constraintStart_toStartOf="@+id/vendas_retanguloBitcoin"
-        app:layout_constraintTop_toTopOf="@+id/vendas_retanguloBitcoin"
+        app:layout_constraintStart_toStartOf="@+id/vender_retanguloBitcoin"
+        app:layout_constraintTop_toTopOf="@+id/vender_retanguloBitcoin"
         app:srcCompat="@drawable/ic_bitcoin" />
 
     <TextView
-        android:id="@+id/vendas_quantidadeDeBitcoin"
+        android:id="@+id/vender_quantidadeDeBitcoin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -149,11 +136,11 @@
         android:text="3"
         android:textColor="#F8161515"
         android:textSize="24sp"
-        app:layout_constraintStart_toEndOf="@+id/vendas_bitcoinLogo"
-        app:layout_constraintTop_toTopOf="@+id/vendas_retanguloBitcoin" />
+        app:layout_constraintStart_toEndOf="@+id/vender_bitcoinLogo"
+        app:layout_constraintTop_toTopOf="@+id/vender_retanguloBitcoin" />
 
     <TextView
-        android:id="@+id/vendas_reaisBitcoin"
+        android:id="@+id/vender_reaisBitcoin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
@@ -162,21 +149,21 @@
         android:text="@string/money"
         android:textColor="@android:color/black"
         android:textSize="18sp"
-        app:layout_constraintStart_toEndOf="@+id/vendas_quantidadeDeBitcoin"
-        app:layout_constraintTop_toTopOf="@+id/vendas_retanguloBitcoin" />
+        app:layout_constraintStart_toEndOf="@+id/vender_quantidadeDeBitcoin"
+        app:layout_constraintTop_toTopOf="@+id/vender_retanguloBitcoin" />
 
     <TextView
-        android:id="@+id/vendas_dinheiroCompradoBitcoin"
+        android:id="@+id/vender_dinheiroCompradoBitcoin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:text="15.754,50"
-        app:layout_constraintStart_toEndOf="@+id/vendas_valorCompradoBitcoin"
-        app:layout_constraintTop_toBottomOf="@+id/vendas_linhaBitcoin" />
+        app:layout_constraintStart_toEndOf="@+id/vender_valorCompradoBitcoin"
+        app:layout_constraintTop_toBottomOf="@+id/vender_linhaBitcoin" />
 
     <TextView
-        android:id="@+id/vendas_unitarioBitcoin"
+        android:id="@+id/vender_unitarioBitcoin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="68dp"
@@ -184,11 +171,11 @@
         android:layout_marginRight="32dp"
         android:text="@string/unitario"
         android:textColor="@android:color/black"
-        app:layout_constraintEnd_toEndOf="@+id/vendas_retanguloBitcoin"
-        app:layout_constraintTop_toTopOf="@+id/vendas_retanguloBitcoin" />
+        app:layout_constraintEnd_toEndOf="@+id/vender_retanguloBitcoin"
+        app:layout_constraintTop_toTopOf="@+id/vender_retanguloBitcoin" />
 
     <TextView
-        android:id="@+id/vendas_quantidadeBitcoin"
+        android:id="@+id/vender_quantidadeBitcoin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
@@ -197,11 +184,11 @@
         android:text="@string/quantidade"
         android:textColor="@android:color/black"
         android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="@+id/vendas_retanguloBitcoin"
-        app:layout_constraintStart_toStartOf="@+id/vendas_retanguloBitcoin" />
+        app:layout_constraintBottom_toBottomOf="@+id/vender_retanguloBitcoin"
+        app:layout_constraintStart_toStartOf="@+id/vender_retanguloBitcoin" />
 
     <EditText
-        android:id="@+id/vendas_numeroVendaBitcoin"
+        android:id="@+id/vendervender_numeroVendaBitcoin"
         android:layout_width="98dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -211,11 +198,11 @@
         android:ems="10"
         android:inputType="numberDecimal"
         android:textCursorDrawable="@android:color/background_dark"
-        app:layout_constraintBottom_toBottomOf="@+id/vendas_retanguloBitcoin"
-        app:layout_constraintStart_toEndOf="@+id/vendas_quantidadeBitcoin" />
+        app:layout_constraintBottom_toBottomOf="@+id/vender_retanguloBitcoin"
+        app:layout_constraintStart_toEndOf="@+id/vender_quantidadeBitcoin" />
 
     <TextView
-        android:id="@+id/vendas_palavraBitcoin"
+        android:id="@+id/vender_palavraBitcoin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="32dp"
@@ -223,11 +210,11 @@
         android:layout_marginBottom="28dp"
         android:text="Bitcoin"
         android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="@+id/vendas_retanguloBitcoin"
-        app:layout_constraintEnd_toEndOf="@+id/vendas_retanguloBitcoin" />
+        app:layout_constraintBottom_toBottomOf="@+id/vender_retanguloBitcoin"
+        app:layout_constraintEnd_toEndOf="@+id/vender_retanguloBitcoin" />
 
     <TextView
-        android:id="@+id/vendas_quantoValeBitcoin"
+        android:id="@+id/vender_quantoValeBitcoin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -237,55 +224,55 @@
         android:textColor="@android:color/black"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toEndOf="@+id/vendas_reaisBitcoin"
-        app:layout_constraintTop_toTopOf="@+id/vendas_retanguloBitcoin" />
+        app:layout_constraintStart_toEndOf="@+id/vender_reaisBitcoin"
+        app:layout_constraintTop_toTopOf="@+id/vender_retanguloBitcoin" />
 
     <TextView
-        android:id="@+id/vendas_palavraUnitárioBitcoin"
+        android:id="@+id/vender_palavraUnitárioBitcoin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="32dp"
         android:layout_marginRight="32dp"
         android:text="@string/unitario"
-        app:layout_constraintEnd_toEndOf="@+id/vendas_retanguloBitcoin"
-        app:layout_constraintTop_toBottomOf="@+id/vendas_linhaBitcoin" />
+        app:layout_constraintEnd_toEndOf="@+id/vender_retanguloBitcoin"
+        app:layout_constraintTop_toBottomOf="@+id/vender_linhaBitcoin" />
 
 
     <ImageView
-        android:id="@+id/vendas_retanguloBrita"
+        android:id="@+id/vender_retanguloBrita"
         android:layout_width="360dp"
         android:layout_height="186dp"
         android:layout_marginTop="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/vendas_retanguloBitcoin"
+        app:layout_constraintTop_toBottomOf="@+id/vender_retanguloBitcoin"
         app:srcCompat="@drawable/ic_retangulo_vender" />
 
     <ImageView
-        android:id="@+id/vendas_linhaBrita"
+        android:id="@+id/vender_linhaBrita"
         android:layout_width="340dp"
         android:layout_height="5dp"
         android:layout_marginTop="84dp"
         android:contentDescription="TODO"
         android:tint="#00858383"
-        app:layout_constraintEnd_toEndOf="@+id/vendas_retanguloBrita"
-        app:layout_constraintStart_toStartOf="@+id/vendas_retanguloBrita"
-        app:layout_constraintTop_toTopOf="@+id/vendas_retanguloBrita"
+        app:layout_constraintEnd_toEndOf="@+id/vender_retanguloBrita"
+        app:layout_constraintStart_toStartOf="@+id/vender_retanguloBrita"
+        app:layout_constraintTop_toTopOf="@+id/vender_retanguloBrita"
         app:srcCompat="@drawable/ic_linha_reta"
         tools:ignore="VectorDrawableCompat" />
 
     <TextView
-        android:id="@+id/vendas_valorCompradoBrita"
+        android:id="@+id/vender_valorCompradoBrita"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="64dp"
         android:layout_marginLeft="64dp"
         android:text="@string/comp"
-        app:layout_constraintStart_toStartOf="@+id/vendas_retanguloBrita"
-        app:layout_constraintTop_toBottomOf="@+id/vendas_linhaBrita" />
+        app:layout_constraintStart_toStartOf="@+id/vender_retanguloBrita"
+        app:layout_constraintTop_toBottomOf="@+id/vender_linhaBrita" />
 
     <TextView
-        android:id="@+id/vendas_quantidadeDeBrita"
+        android:id="@+id/vender_quantidadeDeBrita"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -294,11 +281,11 @@
         android:text="1200000"
         android:textColor="#F8161515"
         android:textSize="24sp"
-        app:layout_constraintStart_toEndOf="@+id/vendas_britaLogo"
-        app:layout_constraintTop_toTopOf="@+id/vendas_retanguloBrita" />
+        app:layout_constraintStart_toEndOf="@+id/vender_britaLogo"
+        app:layout_constraintTop_toTopOf="@+id/vender_retanguloBrita" />
 
     <TextView
-        android:id="@+id/vendas_reaisBrita"
+        android:id="@+id/vender_reaisBrita"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
@@ -307,21 +294,21 @@
         android:text="@string/money"
         android:textColor="@android:color/black"
         android:textSize="18sp"
-        app:layout_constraintStart_toEndOf="@+id/vendas_quantidadeDeBrita"
-        app:layout_constraintTop_toTopOf="@+id/vendas_retanguloBrita" />
+        app:layout_constraintStart_toEndOf="@+id/vender_quantidadeDeBrita"
+        app:layout_constraintTop_toTopOf="@+id/vender_retanguloBrita" />
 
     <TextView
-        android:id="@+id/vendas_dinheiroCompradoBrita"
+        android:id="@+id/vender_dinheiroCompradoBrita"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:text="4,25"
-        app:layout_constraintStart_toEndOf="@+id/vendas_valorCompradoBrita"
-        app:layout_constraintTop_toBottomOf="@+id/vendas_linhaBrita" />
+        app:layout_constraintStart_toEndOf="@+id/vender_valorCompradoBrita"
+        app:layout_constraintTop_toBottomOf="@+id/vender_linhaBrita" />
 
     <TextView
-        android:id="@+id/vendas_unitarioBrita"
+        android:id="@+id/vender_unitarioBrita"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="68dp"
@@ -329,11 +316,11 @@
         android:layout_marginRight="32dp"
         android:text="@string/unitario"
         android:textColor="@android:color/black"
-        app:layout_constraintEnd_toEndOf="@+id/vendas_retanguloBrita"
-        app:layout_constraintTop_toTopOf="@+id/vendas_retanguloBrita" />
+        app:layout_constraintEnd_toEndOf="@+id/vender_retanguloBrita"
+        app:layout_constraintTop_toTopOf="@+id/vender_retanguloBrita" />
 
     <TextView
-        android:id="@+id/vendas_quantidadeBrita"
+        android:id="@+id/vender_quantidadeBrita"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
@@ -342,11 +329,11 @@
         android:text="@string/quantidade"
         android:textColor="@android:color/black"
         android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="@+id/vendas_retanguloBrita"
-        app:layout_constraintStart_toStartOf="@+id/vendas_retanguloBrita" />
+        app:layout_constraintBottom_toBottomOf="@+id/vender_retanguloBrita"
+        app:layout_constraintStart_toStartOf="@+id/vender_retanguloBrita" />
 
     <EditText
-        android:id="@+id/vendas_numeroVendaBrita"
+        android:id="@+id/vender_numeroVendaBrita"
         android:layout_width="98dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -356,11 +343,11 @@
         android:ems="10"
         android:inputType="numberDecimal"
         android:textCursorDrawable="@android:color/background_dark"
-        app:layout_constraintBottom_toBottomOf="@+id/vendas_retanguloBrita"
-        app:layout_constraintStart_toEndOf="@+id/vendas_quantidadeBrita" />
+        app:layout_constraintBottom_toBottomOf="@+id/vender_retanguloBrita"
+        app:layout_constraintStart_toEndOf="@+id/vender_quantidadeBrita" />
 
     <TextView
-        android:id="@+id/vendas_palavraBrita"
+        android:id="@+id/vender_palavraBrita"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="32dp"
@@ -368,11 +355,11 @@
         android:layout_marginBottom="28dp"
         android:text="Brita"
         android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="@+id/vendas_retanguloBrita"
-        app:layout_constraintEnd_toEndOf="@+id/vendas_retanguloBrita" />
+        app:layout_constraintBottom_toBottomOf="@+id/vender_retanguloBrita"
+        app:layout_constraintEnd_toEndOf="@+id/vender_retanguloBrita" />
 
     <TextView
-        android:id="@+id/vendas_quantoValeBrita"
+        android:id="@+id/vender_quantoValeBrita"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -382,11 +369,11 @@
         android:textColor="@android:color/black"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toEndOf="@+id/vendas_reaisBrita"
-        app:layout_constraintTop_toTopOf="@+id/vendas_retanguloBrita" />
+        app:layout_constraintStart_toEndOf="@+id/vender_reaisBrita"
+        app:layout_constraintTop_toTopOf="@+id/vender_retanguloBrita" />
 
     <TextView
-        android:id="@+id/vendas_britaLogo"
+        android:id="@+id/vender_britaLogo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -397,22 +384,22 @@
         android:textColor="#161616"
         android:textSize="28sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/vendas_retanguloBrita"
-        app:layout_constraintTop_toTopOf="@+id/vendas_retanguloBrita" />
+        app:layout_constraintStart_toStartOf="@+id/vender_retanguloBrita"
+        app:layout_constraintTop_toTopOf="@+id/vender_retanguloBrita" />
 
     <TextView
-        android:id="@+id/vendas_palavraUnitárioBrita"
+        android:id="@+id/vender_palavraUnitárioBrita"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="32dp"
         android:layout_marginRight="32dp"
         android:text="@string/unitario"
-        app:layout_constraintEnd_toEndOf="@+id/vendas_retanguloBrita"
-        app:layout_constraintTop_toBottomOf="@+id/vendas_linhaBrita" />
+        app:layout_constraintEnd_toEndOf="@+id/vender_retanguloBrita"
+        app:layout_constraintTop_toBottomOf="@+id/vender_linhaBrita" />
 
 
     <TextView
-        android:id="@+id/vendas_total"
+        android:id="@+id/vender_total"
         android:layout_width="wrap_content"
         android:layout_height="26dp"
         android:layout_marginEnd="8dp"
@@ -421,11 +408,11 @@
         android:textColor="#111010"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/vendas_valorTotal"
-        app:layout_constraintEnd_toStartOf="@+id/vendas_linhaInferiorConfirmar" />
+        app:layout_constraintBottom_toBottomOf="@+id/vender_valorTotal"
+        app:layout_constraintEnd_toStartOf="@+id/vender_linhaInferiorConfirmar" />
 
     <Button
-        android:id="@+id/vendas_confirmar"
+        android:id="@+id/vender_confirmar"
         android:layout_width="120dp"
         android:layout_height="47dp"
         android:layout_marginBottom="8dp"
@@ -437,7 +424,20 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/vendas_valorTotal"
+        android:id="@+id/vender_rsTotal"
+        android:layout_width="0dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:text="@string/money"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/vender_linhaInferiorConfirmar"
+        app:layout_constraintStart_toEndOf="@+id/vender_total" />
+
+    <TextView
+        android:id="@+id/vender_valorTotal"
         android:layout_width="31dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -448,7 +448,7 @@
         android:text="10"
         android:textColor="#090808"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/vendas_linhaInferiorConfirmar"
+        app:layout_constraintBottom_toTopOf="@+id/vender_linhaInferiorConfirmar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 </android.support.constraint.ConstraintLayout>
