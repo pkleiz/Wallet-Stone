@@ -117,29 +117,16 @@
         app:srcCompat="@drawable/ic_bitcoin" />
 
     <TextView
-        android:id="@+id/comprar_quantidadeDeBitcoin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="58dp"
-        android:text="3"
-        android:textColor="#F8161515"
-        android:textSize="24sp"
-        app:layout_constraintStart_toEndOf="@+id/comprar_bitcoinLogo"
-        app:layout_constraintTop_toTopOf="@+id/comprar_retanguloBitcoin" />
-
-    <TextView
         android:id="@+id/comprar_reaisBitcoin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginLeft="30dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginLeft="64dp"
         android:layout_marginTop="65dp"
         android:text="@string/money"
         android:textColor="@android:color/black"
         android:textSize="18sp"
-        app:layout_constraintStart_toEndOf="@+id/comprar_quantidadeDeBitcoin"
+        app:layout_constraintStart_toEndOf="@+id/comprar_bitcoinLogo"
         app:layout_constraintTop_toTopOf="@+id/comprar_retanguloBitcoin" />
 
     <TextView
@@ -232,29 +219,16 @@
         tools:ignore="VectorDrawableCompat" />
 
     <TextView
-        android:id="@+id/comprar_quantidadeDeBrita"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="58dp"
-        android:text="1200000"
-        android:textColor="#F8161515"
-        android:textSize="24sp"
-        app:layout_constraintStart_toEndOf="@+id/comprar_britaLogo"
-        app:layout_constraintTop_toTopOf="@+id/comprar_retanguloBrita" />
-
-    <TextView
         android:id="@+id/comprar_reaisBrita"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginLeft="30dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginLeft="64dp"
         android:layout_marginTop="65dp"
         android:text="@string/money"
         android:textColor="@android:color/black"
         android:textSize="18sp"
-        app:layout_constraintStart_toEndOf="@+id/comprar_quantidadeDeBrita"
+        app:layout_constraintStart_toEndOf="@+id/comprar_britaLogo"
         app:layout_constraintTop_toTopOf="@+id/comprar_retanguloBrita" />
 
     <TextView
