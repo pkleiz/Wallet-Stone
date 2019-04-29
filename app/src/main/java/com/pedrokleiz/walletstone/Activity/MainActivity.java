@@ -1,9 +1,11 @@
 package com.pedrokleiz.walletstone.Activity;
 
+import android.content.ContentValues;
 import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -15,10 +17,21 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException;
 import com.google.firebase.auth.FirebaseAuthInvalidUserException;
-import com.google.firebase.auth.FirebaseAuthUserCollisionException;
+import com.pedrokleiz.walletstone.API.MoedaService;
+import com.pedrokleiz.walletstone.Auxiliar.DataAtualFormatada;
+import com.pedrokleiz.walletstone.Auxiliar.MoedasFormatadas;
 import com.pedrokleiz.walletstone.Config.FirebaseConfig;
+import com.pedrokleiz.walletstone.Helper.DbHelper;
+import com.pedrokleiz.walletstone.Model.Bitcoin;
+import com.pedrokleiz.walletstone.Model.Brita;
 import com.pedrokleiz.walletstone.Model.User;
 import com.pedrokleiz.walletstone.R;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -28,6 +41,11 @@ public class MainActivity extends AppCompatActivity {
     private Button login_submit,login_createAccount;
     private User usuario;
     private FirebaseAuth login_autentication,login_verifyIsLogged;
+    private String brita, bitcoin;
+    private Retrofit retrofitBitcoin, retrofitBrita;
+
+    private MoedasFormatadas data;
+
 
     //endregion
 
@@ -56,7 +74,6 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                String login_login_texto = login_login.getText().toString();
                String login_password_texto = login_password.getText().toString();
-
                 if ((CadastroActivity.stringIsEmply(login_login_texto) == false) || (CadastroActivity.stringIsEmply(login_password_texto) == false)) {
                     CadastroActivity.notification(v, "Preencha todos os campos");
                 }else {
@@ -79,13 +96,93 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), CadastroActivity.class);
                 startActivity(intent);
-
             }
         });
 
+
+        //brita = data.britaFormatada();
+        //bitcoin = data.bitcoinFormadata();
+
+        retrofitBitcoin = new Retrofit.Builder()
+                .baseUrl("https://www.mercadobitcoin.net/")
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
+        recuperarMoedasRetrofit();
+
+        retrofitBrita = new Retrofit.Builder()
+                .baseUrl("https://olinda.bcb.gov.br/olinda/servico/PTAX/versao/v1/odata/")
+                //.baseUrl("https://www.mercadobitcoin.net/")
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
+        recuperarMoedasRetrofit();
+
+
+        //instanciando o banco de dados
+
     }
 
+
     //region Auxiliar Methods
+
+    public void recuperarMoedasRetrofit() {
+
+        DbHelper db = new DbHelper( getApplicationContext());
+        final ContentValues cv = new  ContentValues();
+
+        MoedaService moedasService = retrofitBitcoin.create(MoedaService.class);
+        final DataAtualFormatada data = new DataAtualFormatada();
+
+        Call<Brita> call = moedasService.recuperarBitcoin("2019/4/29");
+        //Call<Bitcoin> call1 = moedasService.recuperarBrita("2019-04-29");
+
+
+//        call1.enqueue(new Callback<Bitcoin>() {
+//            @Override
+//            public void onResponse(Call<Bitcoin> call, Response<Bitcoin> response) {
+//                if (response.isSuccessful()) {
+//                    Bitcoin bitcoin = response.body();
+//                    if (bitcoin.getAvg_price() != null) {
+//                        if (!(cv.containsKey("2019/04/26"))) {
+//                            cv.put("data", "2019/04/26");
+//                            cv.put("valorBitcoin", bitcoin.getAvg_price()); //Dados do bitcoin
+//
+//                        }
+//                         else {
+//                             Log.i("banco", "não funfunou");
+//                        }
+//                    }
+//                }
+//            }
+//
+//            @Override
+//            public void onFailure(Call<Bitcoin> call, Throwable t) {
+//
+//            }
+//        });
+
+        call.enqueue(new Callback<Brita>() {
+            @Override
+            public void onResponse(Call<Brita> call, Response<Brita> response) {
+                Brita brita = response.body();
+                if (response.isSuccessful()) {
+                    if(brita.getCotacaoCompra()!=null) {
+                        cv.put("valorBitcoin",brita.getCotacaoCompra()); //dados do Brita
+                        cv.put("valorBitcoin",brita.getCotacaoVenda());
+                    }
+
+
+                }
+            }
+
+
+            @Override
+            public void onFailure(Call<Brita> call, Throwable t) {
+
+            }
+        });
+        db.getWritableDatabase().insert("walletCotacoes",null,cv);
+        db.close();
+    }
 
 
     @Override
@@ -107,6 +204,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful()){
+
                     openScreen();
                     finish();
                 }else {
