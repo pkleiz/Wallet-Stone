@@ -2,21 +2,22 @@ package com.pedrokleiz.walletstone.Auxiliar;
 
 import android.util.Log;
 
-import java.sql.Timestamp;
 import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class DataAtualFormatada {
 
     public String dataHojeBrita(){
-        Timestamp timestamp = new Timestamp(System.currentTimeMillis());
-        String date = new SimpleDateFormat("MM-dd-yyyy").format(timestamp.getTime());
-        Log.i(date,"coisa "+date);
-        return date;
+
+        SimpleDateFormat sdff = new SimpleDateFormat("MM-dd-yyyy");
+        String dia = (sdff.format(new Date()));
+        return dia;
     }
 
     public String dataHojeBitcoin(){
-        Timestamp timestamp = new Timestamp(System.currentTimeMillis());
-        String date = new SimpleDateFormat("yyyy/MM/dd").format(timestamp.getTime());
-        return date;
+
+        SimpleDateFormat sdff = new SimpleDateFormat("yyyy/MM/dd");
+        String dia = (sdff.format(new Date()));
+        return dia;
     }
 }

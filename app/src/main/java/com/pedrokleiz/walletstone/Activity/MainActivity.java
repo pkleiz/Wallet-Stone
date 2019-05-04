@@ -19,13 +19,15 @@ import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException;
 import com.google.firebase.auth.FirebaseAuthInvalidUserException;
 import com.pedrokleiz.walletstone.API.MoedaService;
 import com.pedrokleiz.walletstone.Auxiliar.DataAtualFormatada;
-import com.pedrokleiz.walletstone.Auxiliar.MoedasFormatadas;
 import com.pedrokleiz.walletstone.Config.FirebaseConfig;
 import com.pedrokleiz.walletstone.Helper.DbHelper;
 import com.pedrokleiz.walletstone.Model.Bitcoin;
-import com.pedrokleiz.walletstone.Model.Brita;
+import com.pedrokleiz.walletstone.Model.BritaResponse;
 import com.pedrokleiz.walletstone.Model.User;
 import com.pedrokleiz.walletstone.R;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -43,8 +45,8 @@ public class MainActivity extends AppCompatActivity {
     private FirebaseAuth login_autentication,login_verifyIsLogged;
     private String brita, bitcoin;
     private Retrofit retrofitBitcoin, retrofitBrita;
-
-    private MoedasFormatadas data;
+    private DataAtualFormatada dataHoje = new DataAtualFormatada();
+    private List<BritaResponse> britaResponses = new ArrayList<>();
 
 
     //endregion
@@ -62,6 +64,7 @@ public class MainActivity extends AppCompatActivity {
         login_password = findViewById(R.id.login_id_password);
         login_submit = findViewById(R.id.login_id_submit);
         login_createAccount = findViewById(R.id.login_id_createAccount);
+
 
 
         //endregion
@@ -125,61 +128,61 @@ public class MainActivity extends AppCompatActivity {
     //region Auxiliar Methods
 
     public void recuperarMoedasRetrofit() {
-
+        final String dataBrita = dataHoje.dataHojeBrita();
+        String dataBitcoin = dataHoje.dataHojeBitcoin();
         DbHelper db = new DbHelper( getApplicationContext());
         final ContentValues cv = new  ContentValues();
+
 
         MoedaService moedasService = retrofitBitcoin.create(MoedaService.class);
         final DataAtualFormatada data = new DataAtualFormatada();
 
-        Call<Brita> call = moedasService.recuperarBitcoin("2019/4/29");
-        //Call<Bitcoin> call1 = moedasService.recuperarBrita("2019-04-29");
+        Call<BritaResponse> call = moedasService.recuperarBrita("10-05-1991");
+        Call<Bitcoin> call1 = moedasService.recuperarBitcoin(dataBitcoin);
 
 
-//        call1.enqueue(new Callback<Bitcoin>() {
-//            @Override
-//            public void onResponse(Call<Bitcoin> call, Response<Bitcoin> response) {
-//                if (response.isSuccessful()) {
-//                    Bitcoin bitcoin = response.body();
-//                    if (bitcoin.getAvg_price() != null) {
-//                        if (!(cv.containsKey("2019/04/26"))) {
-//                            cv.put("data", "2019/04/26");
-//                            cv.put("valorBitcoin", bitcoin.getAvg_price()); //Dados do bitcoin
-//
-//                        }
-//                         else {
-//                             Log.i("banco", "não funfunou");
-//                        }
-//                    }
-//                }
-//            }
-//
-//            @Override
-//            public void onFailure(Call<Bitcoin> call, Throwable t) {
-//
-//            }
-//        });
 
-        call.enqueue(new Callback<Brita>() {
+
+        call.enqueue(new Callback<BritaResponse>() {
             @Override
-            public void onResponse(Call<Brita> call, Response<Brita> response) {
-                Brita brita = response.body();
-                if (response.isSuccessful()) {
-                    if(brita.getCotacaoCompra()!=null) {
-                        cv.put("valorBitcoin",brita.getCotacaoCompra()); //dados do Brita
-                        cv.put("valorBitcoin",brita.getCotacaoVenda());
-                    }
-
-
+            public void onResponse(Call<BritaResponse> call, Response<BritaResponse> response) {
+                if(response.isSuccessful()){
+                    britaResponses = (List<BritaResponse>) response.body();
+                    cv.put("data", dataBrita);
+                    cv.put("valorBrita", String.valueOf(britaResponses.get(0))); //Dados da Brita
                 }
             }
 
+            @Override
+            public void onFailure(Call<BritaResponse> call, Throwable t) {
+                Log.i(t.toString(),"falhou");
+            }
+        });
+
+        call1.enqueue(new Callback<Bitcoin>() {
+            @Override
+            public void onResponse(Call<Bitcoin> call, Response<Bitcoin> response) {
+                if (response.isSuccessful()) {
+                    Bitcoin bitcoin = response.body();
+                    if (bitcoin.getAvg_price() != null) {
+                        if (!(cv.containsKey("2019/04/26"))) {
+                            cv.put("data", "2019/04/26");
+                            cv.put("valorBitcoin", bitcoin.getAvg_price()); //Dados do bitcoin
+
+                        }
+                        else {
+                            Log.i("banco", "não funcionou");
+                        }
+                    }
+                }
+            }
 
             @Override
-            public void onFailure(Call<Brita> call, Throwable t) {
+            public void onFailure(Call<Bitcoin> call, Throwable t) {
 
             }
         });
+
         db.getWritableDatabase().insert("walletCotacoes",null,cv);
         db.close();
     }
